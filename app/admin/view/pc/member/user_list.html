@@ -2,7 +2,7 @@
 <html>
 <!--head样式-->
 {include file="pc/public/head" /}
-
+<!--head样式-->
 <style>
     .list-page {text-align:center;padding: 15px 15px;}
     .mws-panel-content {background: #eee;}
@@ -41,7 +41,11 @@
             </div>
         </div>
     </form>
-    <xblock><button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button><button class="layui-btn" onclick="member_add('添加用户','member-add.html','600','500')"><i class="layui-icon">&#xe608;</i>添加</button><span class="x-right" style="line-height:40px">共有数据：88 条</span></xblock>
+    <xblock><button class="layui-btn layui-btn-danger" onclick="delAll()">
+        <i class="layui-icon">&#xe640;</i>批量删除</button>
+        <button class="layui-btn" onclick="member_add('添加用户','{:url(\'Member/user_add\')}','600','500')">
+            <i class="layui-icon">&#xe608;</i>添加</button><span class="x-right" style="line-height:40px">共有数据：88 条</span>
+    </xblock>
     <table class="layui-table">
         <thead>
         <tr>
@@ -81,7 +85,7 @@
                    href="javascript:;" title="修改密码">
                     <i class="layui-icon">&#xe631;</i>
                 </a>
-                <a title="删除" href="javascript:;" onclick="member_del(this,'1')"
+                <a title="删除" href="javascript:;" onclick="member_del(this,'{$list.id}')"
                    style="text-decoration:none">
                     <i class="layui-icon">&#xe640;</i>
                 </a>
@@ -93,8 +97,9 @@
     <div class="pagination">{$userList|raw}</div>
     <div id="page"></div>
 </div>
-<script src="./lib/layui/layui.js" charset="utf-8"></script>
-<script src="./js/x-layui.js" charset="utf-8"></script>
+<!--底部样式-->
+{include file="pc/public/footer" /}
+<!--底部样式-->
 <script>
     layui.use(['laydate','element','laypage','layer'], function(){
         $ = layui.jquery;//jquery
@@ -193,8 +198,21 @@
     function member_del(obj,id){
         layer.confirm('确认要删除吗？',function(index){
             //发异步删除数据
-            $(obj).parents("tr").remove();
-            layer.msg('已删除!',{icon:1,time:1000});
+            $.ajax({
+                url:"{:url('Member/user_del')}",
+                type:"post",
+                data:{id:id},
+                dataType:"json",
+                success: function(res){
+                    if (res.code == '1') {
+                        $(obj).parents("tr").remove();
+                        layer.msg('已删除!',{icon:1,time:1000});
+                    } else {
+                        layer.msg('删除失败!',{icon:1,time:1000});
+                    }
+                }
+            });
+
         });
     }
 </script>

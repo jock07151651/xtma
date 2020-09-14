@@ -22,3 +22,5 @@ Route::rule('sys_set','Config/sys_set','get|post');
 
 // 后台会员
 Route::rule('user_list','Member/user_list','get|post');
+Route::rule('user_add','Member/user_add','get|post');
+Route::rule('user_del','Member/user_del','get|post');
