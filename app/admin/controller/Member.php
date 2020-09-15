@@ -47,7 +47,7 @@ class Member extends BaseController
 
     // 会员修改
     public function user_edit() {
-        return 1;
+        return view('pc/member/user_edit');
     }
 
     // 会员删除

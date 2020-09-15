@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+    <title>用户登录-地方门户-门户网-火鸟门户系统官方演示站</title>
+
+    <link rel="stylesheet" type="text/css" href="__INDEX__/css/base-1600133341.css" media="all">
+    <link rel="stylesheet" type="text/css" href="__INDEX__/css/login-1600133341.css" media="all">
+    <script type="text/javascript" src="__INDEX__/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        var masterDomain = 'https://ihuoniao.cn', redirectUrl = 'https%3A%2F%2Fihuoniao.cn', site = '';
+        var criticalPoint = 1240, criticalClass = "w1200";
+        $("html").addClass($(window).width() > criticalPoint ? criticalClass : "");
+        var geetest = 1;
+    </script>
+</head>
+
+<body>
+<script type="text/javascript">var cookiePre = 'HN_', cfg_clihost = 'ihuoniao.cn', cfg_module = 'member',cfg_cityInfo = ''; </script>
+
+<!-- 多语言 -->
+<script src="__INDEX__/js/zh-CN-1600133341.js"></script>
+
+<!-- 顶部信息 s -->
+{include file="pc/public/top" /}
+<!-- 顶部信息 e -->
+<script type="text/template" id="notLoginHtml">
+    <div class="loginbefore fn-clear" id="navLoginAfter">
+        <a href="https://ihuoniao.cn/register.html" class="regist">注册</a>
+        <span class="fn-left">&nbsp;/&nbsp;</span>
+        <span class="logint"><a href="https://ihuoniao.cn/login.html">登录</a></span>
+
+        <a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=qq" title="QQ快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/qq/img/24.png" /></i></a>
+
+        <a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=alipay" title="支付宝快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/alipay/img/24.png" /></i></a>
+
+        <a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=wechat" title="微信快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/wechat/img/24.png" /></i></a>
+    </div>
+</script>
+
+
+<!-- head s -->
+<div class="wrap header fn-clear">
+    <div class="logo">
+        <a href="/" title="地方门户-门户网-火鸟门户系统官方演示站">
+            <img src="__INDEX__/picture/15687069614961.png" alt="地方门户-门户网-火鸟门户系统官方演示站">
+            <div class="shortname"><h2>火鸟门户</h2><p>地方最大最全生活网</p></div>
+        </a>
+    </div>
+    <dl class="kefu fn-clear">
+        <dt><img src="__INDEX__/picture/kf_tel.png" alt=""></dt>
+        <dd>
+            <p class="p1">客服热线</p>
+            <p class="p2">0512-67581578</p>
+        </dd>
+    </dl>
+</div>
+<!-- head e -->
+<!-- 登录外框 s -->
+<div class="loginwrap">
+    <div class="wrap">
+        <div class="loginBG">
+            <div class="siteAdvObj"><a href="javascript:;" style="cursor:default;"><img src="__INDEX__/picture/15469365748249.jpg" width="1920" height="560" alt=""></a><div class="advMark pos3">广告</div></div>
+        </div>
+        <div class="formbox">
+            <span class="ewmlogin"></span>
+            <div class="saoma">
+                <p class="title">手机扫码，安全登录</p>
+                <div class="picbox">
+                    <div class="pic1" id="login_container"><iframe src="javascript:;" frameborder="0" scrolling="no" width="300px" height="350px"></iframe></div>
+                </div>
+            </div>
+            <form action="" method="post" class="loginform">
+                <input name="token" id="token" value="dbf63e6cc8700c2d6ae6b2636aafb7198d9298c2" type="hidden">
+                <div class="login-container">
+                    <ul class="tab fn-clear">
+                        <li class="curr">普通登录</li>
+                        <li>短信登录</li>					</ul>
+                    <div class="main">
+                        <div class="error"><p>请输入登录帐号</p></div>
+                        <div class="item">
+                            <div class="form-row">
+                                <div class="inpbdr">
+                                    <i class="lgicon iconuser"></i>
+                                    <input type="text" class="inp username" id="loginuser" name="loginuser" placeholder="用户名/手机号码/邮箱">
+
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="inpbdr">
+                                    <i class="lgicon iconlock"></i>
+                                    <input type="password" class="inp password" id="loginpass" name="loginpass" placeholder="密码">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item fn-hide">
+                            <div class="form-row">
+                                <div class="inpbdr">
+                                    <span class="areaCode"><i>+86</i><s></s></span>
+                                    <input type="text" class="inp phone" id="phone" name="phone" placeholder="手机号码">
+                                </div>
+                            </div>
+                            <div class="areaCode_wrap">
+                                <ul></ul>
+                            </div>
+                            <div class="form-row">
+                                <div class="inpbdr">
+                                    <i class="lgicon iconlock"></i>
+                                    <input type="text" class="inp vercode" id="vercode" name="vercode" placeholder="短信验证码">
+                                    <button type="button" class="getCodes">获取验证码</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row btnwrap">
+                            <input type="submit" class="submit" value="登录">
+                        </div>
+                        <div class="otherdo fn-clear">
+                            <a href="register.html" class="goregister">免费注册，有惊喜></a>
+                            <a href="fpwd.html" class="fogetpsd">忘记密码？</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- <div class="form-row"><div class="rememberpsd"><i class="lgicon iconcheck"></i>两周内自动登录</div></div> -->
+
+                <div class="othertype">
+                    <p>合作网站账号登录：</p>
+
+                    <a href="show-Login_pc_code_101336457_htt.html" title="QQ快捷登录" class="loginconnect"><img src="__INDEX__/picture/32-1600133341.png"></a>
+
+                    <a href="index-https2F2Fopenauth.alipay.c.html" title="支付宝快捷登录" class="loginconnect"><img src="__INDEX__/picture/32-16001333411.png"></a>
+
+                    <a href="login-wechat.html" title="微信快捷登录" class="loginconnect"><img src="__INDEX__/picture/32-16001333412.png"></a>
+
+                    <a href="javascript:;" title="Facebook快捷登录" class="loginconnect"><img src="__INDEX__/picture/32-16001333413.png"></a>
+
+                    <a href="javascript:;" title="豆瓣快捷登录" class="loginconnect"><img src="__INDEX__/picture/32-16001333414.png"></a>
+
+                    <a href="javascript:;" title="360快捷登录" class="loginconnect"><img src="__INDEX__/picture/32-16001333415.png"></a>
+
+                    <a href="javascript:;" title="人人快捷登录" class="loginconnect"><img src="__INDEX__/picture/32-16001333416.png"></a>
+
+                    <a href="javascript:;" title="新浪微博快捷登录" class="loginconnect"><img src="__INDEX__/picture/32-16001333417.png"></a>
+
+                    <a href="javascript:;" title="百度快捷登录" class="loginconnect"><img src="__INDEX__/picture/32-16001333418.png"></a>
+
+                    <a href="javascript:;" title="腾讯微博快捷登录" class="loginconnect"><img src="__INDEX__/picture/32-16001333419.png"></a>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+<!-- 登录外框 e -->
+<!--底部-->
+{include file="pc/public/user_footer" /}
+<!--底部-->
+
+
+<script type='text/javascript' src="__INDEX__/js/zh-CN-1600133341.js"></script>
+<script type="text/javascript" src="__INDEX__/js/common-1600133341.js"></script>
+<script type="text/javascript" src="__INDEX__/js/login-1600133341.js"></script>
+<script type="text/javascript" src="__INDEX__/js/gt.js"></script></body>
+</html>
+<script>var cfg_currency = {"name":"\u4eba\u6c11\u5e01","short":"\u5143","symbol":"\u00a5","code":"RMB","rate":"1"};</script><!-- Processed in page load 0.388895 second(s), 133 queries ,0.006246 second(s) -->

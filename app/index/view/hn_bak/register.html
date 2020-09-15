@@ -1,0 +1,558 @@
+    <!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+<title>用户注册</title>
+
+<link rel="stylesheet" type="text/css" href="static/css/base-1600133341.css" media="all">
+<link rel="stylesheet" type="text/css" href="static/css/pay-1600133341.css" media="all">
+<link rel="stylesheet" type="text/css" href="static/css/pay_list-1600133341.css" media="all">
+<link rel="stylesheet" type="text/css" href="static/css/register_v1-1600133341.css" media="all">
+<script type="text/javascript" src="static/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="static/js/jquery.cookie.js"></script>
+<script type="text/javascript">
+  var masterDomain = 'https://ihuoniao.cn', userDomain = 'https://ihuoniao.cn/u';
+  var criticalPoint = 1240, criticalClass = "w1200";
+  $("html").addClass($(window).width() > criticalPoint ? criticalClass : "");
+    var geetest = 1,type =1;
+</script>
+<!-- 对表单样式进行更改 -->
+<style>
+.register .tab-nav li{width:33%;}
+.register .tab-head .mark{width: 323px;}
+</style>
+</head>
+
+<body>
+<script type="text/javascript">var cookiePre = 'HN_', cfg_clihost = 'ihuoniao.cn', cfg_module = 'member',cfg_cityInfo = ''; </script>
+
+<!-- 多语言 -->
+<script src="static/js/zh-CN-1600133341.js"></script>
+
+<!-- 顶部信息 s -->
+<div class="topInfo">
+	<div class="wrap fn-clear">
+		<div class="loginbox">
+									<div class="loginbefore fn-clear" id="navLoginAfter">
+				<a href="" class="regist">注册</a>
+				<span class="fn-left">&nbsp;/&nbsp;</span>
+				<span class="logint"><a href="login.html">登录</a></span>
+				
+								<a class="loginconnect" href="show-Login_pc_code_101336457_htt.html" title="QQ快捷登录" target="_blank"><i class="picon"><img src="static/picture/24-1600133341.png"></i></a>
+								
+								<a class="loginconnect" href="index-https2F2Fopenauth.alipay.c.html" title="支付宝快捷登录" target="_blank"><i class="picon"><img src="static/picture/24-16001333411.png"></i></a>
+								
+								<a class="loginconnect" href="login-wechat.html" title="微信快捷登录" target="_blank"><i class="picon"><img src="static/picture/24-16001333412.png"></i></a>
+								
+								
+								
+								
+								
+								
+								
+								
+			</div>
+					</div>
+		<ul class="menu topbarlink fn-clear">
+			<li>
+				<a href="index.html" style="color: #f60;">网站首页</a><span class="separ">|</span>
+			</li>
+			<li class="dropdown user">
+				<a href="login-https2F2Fihuoniao.cn2Fu.html">会员中心<i class="picon picon-down"></i></a>
+				<div class="submenu">
+					<a href="login-https2F2Fihuoniao.cn2Fu2Fo.html" target="_blank">我的订单</a>					<a href="login-https2F2Fihuoniao.cn2Fu2Fr.html" target="_blank">交易明细</a>
+					<a href="login-https2F2Fihuoniao.cn2Fu2Fs.html" target="_blank">安全中心</a>
+				</div>
+			</li>
+			<li><a href="mobile.html" target="_blank"><i class=""><img src="static/picture/public_top_icon_mobile.png"></i>手机站</a><span class="separ">|</span>
+				<div class="pop">
+					<s></s>
+					<p>扫码访问<a href="mobile.html" target="_blank"><img src="static/picture/qrcode-httpsihuoniao.cn.jpg" width="150" height="150"></a></p>
+				</div>
+			</li>
+			<li><a href="javascript:;"><i class=""><img src="static/picture/public_top_icon_wechat.png"></i>微信公众号</a><span class="separ">|</span>
+				<div class="pop" style="left: -26px;">
+					<s></s>
+					<p>扫码关注<img src="static/picture/15687067729028.jpg" width="150" height="150"></p>
+				</div>
+			</li>
+			<li class="dropdown">
+				<a href="javascript:;">快速发布<i class="picon picon-down"></i></a>
+				<div class="submenu">
+					<a href="login-https2F2Fihuoniao.cn2Fu2Ff.html" target="_blank">新闻投稿</a>					<a href="login-https2F2Fihuoniao.cn2Fu2Ff1.html" target="_blank">分类信息</a>					<a href="login-https2F2Fihuoniao.cn2Fu2Fc.html" target="_blank">发布房源</a>					<a href="login-https2F2Fihuoniao.cn2Fhuod.html" target="_blank">发布活动</a>					<a href="login-https2F2Fihuoniao.cn2Ftieb.html" target="_blank">发布新贴</a>					<a href="login-https2F2Fihuoniao.cn2Fu2Ff2.html" target="_blank">发起直播</a>  
+					<a href="login-https2F2Fihuoniao.cn2Fu2Ff3.html" target="_blank">发布投票</a>  
+					<a href="login-https2F2Fihuoniao.cn2Fu2Ff4.html" target="_blank">发布二手车</a>  
+					<a href="login-https2F2Fihuoniao.cn2Fu2Ff5.html" target="_blank">发布顺风车</a>				</div>
+			</li>
+			<li class="dropdown webmap">
+				<a href="javascript:;">网站导航<i class="picon picon-down"></i></a>
+				<div class="submenu">
+					
+					<a href="javascript:;" style="">顺风车</a>
+					
+					<a href="javascript:;" style="">信息资讯</a>
+					
+					<a href="javascript:;" style="">二手信息</a>
+					
+					<a href="javascript:;" style="">房产门户</a>
+					
+					<a href="javascript:;" style="">招聘求职</a>
+					
+					<a href="javascript:;" style="">贴吧社区</a>
+					
+					<a href="javascript:;" style="">圈子动态</a>
+					
+					<a href="javascript:;" style="">在线商城</a>
+					
+					<a href="javascript:;" style="">美食外卖</a>
+					
+					<a href="list1.html" target="_blank" style="">小程序直播</a>
+					
+					<a href="javascript:;" style="">视频直播</a>
+					
+					<a href="javascript:;" style="">团购秒杀</a>
+					
+					<a href="business.html" target="_blank" style=" font-weight: 700;">火鸟商家</a>
+					
+					<a href="javascript:;" style="">同城活动</a>
+					
+					<a href="javascript:;" style="">养老机构</a>
+					
+					<a href="javascript:;" style="">教育培训</a>
+					
+					<a href="javascript:;" style="">旅游频道</a>
+					
+					<a href="javascript:;" style="">婚嫁频道</a>
+					
+					<a href="javascript:;" style="">家政服务</a>
+					
+					<a href="javascript:;" style="">汽车门户</a>
+					
+					<a href="javascript:;" style="">装修门户</a>
+					
+					<a href="javascript:;" style="">拖拽专题</a>
+					
+					<a href="javascript:;" style="">互动交友</a>
+					
+					<a href="javascript:;" style="">电子报刊</a>
+					
+					<a href="javascript:;" style="">自助建站</a>
+					
+					<a href="javascript:;" style="">便民黄页</a>
+					
+					<a href="javascript:;" style="">投票活动</a>
+					
+					<a href="javascript:;" style="">积分商城</a>
+					
+					<a href="javascript:;" style="">VR全景</a>
+					
+					<a href="javascript:;" style="">视频频道</a>
+					
+					<a href="javascript:;" style="">图说资讯</a>
+					
+					<a href="javascript:;" target="_blank" style=" color: #00b0f0; font-weight: 700;">酷曼官网</a>
+					
+					<a href="login1.html" target="_blank" style="">休闲游戏</a>
+					
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- 顶部信息 e -->
+<script type="text/template" id="notLoginHtml">
+	<div class="loginbefore fn-clear" id="navLoginAfter">
+		<a href="https://ihuoniao.cn/register.html" class="regist">注册</a>
+		<span class="fn-left">&nbsp;/&nbsp;</span>
+		<span class="logint"><a href="https://ihuoniao.cn/login.html">登录</a></span>
+		
+				<a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=qq" title="QQ快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/qq/img/24.png" /></i></a>
+				
+				<a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=alipay" title="支付宝快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/alipay/img/24.png" /></i></a>
+				
+				<a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=wechat" title="微信快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/wechat/img/24.png" /></i></a>
+				
+				
+				
+				
+				
+				
+				
+				
+	</div>
+</script>
+
+
+<!-- head s -->
+<div class="wrap header fn-clear">
+  <div class="logo">
+    <a href="index.html" title="地方门户-门户网-火鸟门户系统官方演示站">
+			<img src="static/picture/15687069614961.png" alt="地方门户-门户网-火鸟门户系统官方演示站">
+			<div class="shortname"><h2>火鸟门户</h2><p>地方最大最全生活网</p></div>
+		</a>
+  </div>
+  <dl class="kefu fn-clear">
+    <dt><img src="static/picture/kf_tel.png" alt=""></dt>
+    <dd>
+      <p class="p1">客服热线</p>
+      <p class="p2">0512-67581578</p>
+    </dd>
+  </dl>
+</div>
+
+<div class="split-line"></div>
+
+<!-- head e -->
+<div class="wrap">
+  <div class="registerwrap fn-clear">
+    <div class="register">
+      <div class="tab-head">
+        <ul class="tab-nav fn-clear">
+                    <li data-type="1" class="icon1 active"><a href="javascript:;"><span>用户名注册</span></a></li>
+                              <li data-type="2" class="icon2"><a href="javascript:;"><span>手机注册</span></a></li>
+                              <li data-type="3" class="icon2"><a href="javascript:;"><span>邮箱注册</span></a></li>
+                  </ul>
+        <div class="mark"></div>
+      </div>
+      <div class="tab-body">
+        <div class="tab-pane">
+          <form action="" method="post" class="registform">
+			<input name="token" id="token" value="669b4a845f54cc427d36731ea0ee5cdd8fd93462" type="hidden">
+            <input type="hidden" name="areaCode" id="areaCode" value="86">
+                        <div class="ftype ftype01" style="display: block;">
+				<div class="form-row">
+                <dl class="fn-clear">
+                    <dt>用户名</dt>
+                  <dd>
+                    <div class="fn-clear">
+                      <div class="inpbox fn-left">
+                        <input type="text" name="username" class="username1" value="" placeholder="请输入您的用户名">
+                      </div>
+                      <div class="error fn-left"><em></em><i class="error-icon"></i><span>请输入您的用户名账号</span></div>
+                    </div>
+                    <p class="tips">*注册成功后即可使用用户名账号登录</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="form-row">
+                <dl class="fn-clear">
+                  <dt>设置密码</dt>
+                  <dd class="fn-clear">
+                    <div class="inpbox fn-left">
+                      <input type="password" class="password password1" name="" value="" placeholder="密码设置为6个字符"><i class="psw-show"></i>
+                      <p class="tips">*密码不能是6位以下纯数字/字母/半角符号，字母区分大小写</p>
+                    </div>
+                    <div class="error fn-left"><em></em><i class="error-icon"></i><span>请填写密码</span></div>
+                  </dd>
+                </dl>
+              </div>
+                            <div class="form-row">
+                <dl class="fn-clear">
+                    <dt>真实姓名</dt>
+                    <dd>
+                    <div class="fn-clear">
+                    	<div class="inpbox fn-left"><input type="text" name="nickname" class="nickname" value="" placeholder="请输入您的真实姓名"></div>
+                    	<div class="error fn-left"><em></em><i class="error-icon"></i><span>请输入您的真实姓名</span></div>
+                    </div>
+                    </dd>
+                </dl>
+              </div>
+                                          <div class="form-row">
+                <dl class="fn-clear">
+                    <dt>邮箱</dt>
+                    <dd>
+                    <div class="fn-clear">
+                    	<div class="inpbox fn-left"><input type="text" name="email" class="email" value="" placeholder="请输入您的邮箱账号"></div>
+                    	<div class="error fn-left"><em></em><i class="error-icon"></i><span>请填写邮箱</span></div>
+                    </div>
+                    </dd>
+                </dl>
+              </div>
+                                          <div class="form-row">
+                <dl class="fn-clear">
+                    <dt>手机</dt>
+                    <dd>
+                    <div class="fn-clear">
+                    	<div class="inpbox fn-left">
+                        <div class="inpbdr">
+                          <span class="areaCode"><i>+86</i><s></s></span>
+                            <input maxlength="11" type="text" name="phone" class="phone" value="" placeholder="请输入您的手机号">
+                        </div>
+
+                        <div class="areaCode_wrap areaCode_wrap2">
+                          <ul>
+
+                          </ul>
+                        </div>
+                      </div>
+
+                    	<div class="error fn-left"><em></em><i class="error-icon"></i><span>请填写手机号</span></div>
+                    </div>
+                    </dd>
+                </dl>
+              </div>
+              			                <div class="form-row">
+                <dl class="fn-clear">
+                    <dt>验证码</dt>
+                    <dd>
+                    <div class="fn-clear">
+                    	<div class="inpbox fn-left"><input type="text" name="vericode" class="vericode" value="" placeholder="请填写验证码"></div><img src="static/picture/vdimgck.jpg" title="看不清？点击换一张" id="verifycode">
+                    	<div style="float:right;" class="error fn-left"><em></em><i class="error-icon"></i><span>请填写验证码</span></div>
+                    </div>
+                    </dd>
+                </dl>
+              </div>
+                          </div>
+                                    <div class="ftype ftype02">
+              <div class="form-row">
+                <dl class="fn-clear">
+                  <dt>手机号码</dt>
+                  <dd class="fn-clear">
+                    <div class="dropdown-menu fn-left"><a href="javascript:;" class="droptab" id="J-countryMobileCode"><label>86</label><i class="droparrow"></i></a></div>
+                    <div class="inpbox fn-left">
+                      <input type="text" name="" value="" placeholder="请输入您的手机号" class="username3">
+                      <p class="tips">*注册成功后即可使用手机号登录</p>
+                    </div>
+                    <div class="error fn-left"><em></em><i class="error-icon"></i><span>手机号码格式不正确</span></div>
+                  </dd>
+                </dl>
+              </div>
+              <div class="form-row">
+                <dl class="fn-clear">
+                  <dt>验证码</dt>
+                  <dd class="fn-clear">
+                    <div class="inpbox fn-left">
+                      <input type="text" name="" class="yzm3" value="" placeholder="请输入您的手机验证码">
+                    </div>
+                    <a href="javascript:;" class="sendvdimgck sendvdimgck3 fn-left">获取验证码</a>
+                    <a href="javascript:;" class="djs3"></a>
+                    <div class="error fn-left"><em></em><i class="error-icon"></i><span>验证码不正确</span></div>
+                  </dd>
+                </dl>
+              </div>
+              <div class="form-row">
+                <dl class="fn-clear">
+                  <dt>设置密码</dt>
+                  <dd class="fn-clear">
+                    <div class="inpbox fn-left">
+                      <input type="password" class="password password3" name="" value="" placeholder="密码设置为6个字符"><i class="psw-show"></i>
+                      <p class="tips">*密码不能是6位以下纯数字/字母/半角符号，字母区分大小写</p>
+                    </div>
+                    <div class="error fn-left"><em></em><i class="error-icon"></i><span>请填写密码</span></div>
+                  </dd>
+                </dl>
+              </div>
+              <div class="form-row">
+                <dl class="fn-clear">
+                  <dt>确认密码</dt>
+                  <dd class="fn-clear">
+                    <div class="inpbox fn-left">
+                      <input type="password" class="repassword3" name="" value="" placeholder="请再次输入密码">
+                    </div>
+                    <div class="error fn-left"><em></em><i class="error-icon"></i>两次密码输入不一样</div>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+                                    <div class="ftype ftype03">
+              <div class="form-row">
+                <dl class="fn-clear">
+                    <dt>邮箱账号</dt>
+                  <dd>
+                    <div class="fn-clear">
+                      <div class="inpbox fn-left">
+                        <input type="text" name="" class="username2" value="" placeholder="请输入您的邮箱账号">
+                      </div>
+                      <div class="error fn-left"><em></em><i class="error-icon"></i><span>请输入您的邮箱账号</span></div>
+                    </div>
+                    <p class="tips">*注册成功后即可使用邮箱账号登录</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="form-row">
+                <dl class="fn-clear">
+                  <dt>验证码</dt>
+                  <dd class="fn-clear">
+                    <div class="inpbox fn-left">
+                      <input type="text" name="" class="yzm2" value="" placeholder="请输入您的邮箱验证码">
+                    </div>
+                    <a href="javascript:;" class="sendvdimgck sendvdimgck2 fn-left">获取验证码</a>
+                    <a href="javascript:;" class="djs2"></a>
+                    <div class="error fn-left"><em></em><i class="error-icon"></i><span>验证码不正确</span></div>
+                  </dd>
+                </dl>
+              </div>
+              <div class="form-row">
+                <dl class="fn-clear">
+                  <dt>设置密码</dt>
+                  <dd class="fn-clear">
+                    <div class="inpbox fn-left">
+                      <input type="password" class="password2" name="" value="" placeholder="密码设置为6个字符"><i class="psw-show"></i>
+                      <p class="tips">*密码不能是6位以下纯数字/字母/半角符号，字母区分大小写</p>
+                    </div>
+                    <div class="error fn-left"><em></em><i class="error-icon"></i><span>请填写密码</span></div>
+                  </dd>
+                </dl>
+              </div>
+              <div class="form-row">
+                <dl class="fn-clear">
+                  <dt>确认密码</dt>
+                  <dd class="fn-clear">
+                    <div class="inpbox fn-left">
+                      <input type="password" class="repassword2" name="" value="" placeholder="请再次输入密码">
+                    </div>
+                    <div class="error fn-left"><em></em><i class="error-icon"></i>两次密码输入不一样</div>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+                        <div class="form-row">
+              <dl class="fn-clear">
+                <dt></dt>
+                <dd>
+                  <div class="agreement">
+                    <label class="checked"><i class="regicon iconcheck"></i>同意</label>
+                    <a href="protocol-8.html" target="_blank">《会员注册协议》</a>
+                  </div>
+                  <input type="submit" value="立即注册" class="submit">
+                </dd>
+              </dl>
+            </div>
+            <div id="popup-captcha"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="ui-select" data-widget-cid="widget-1" style="z-index: 99; display: none; position: absolute;">
+  <ul class="ui-select-content" data-role="content">
+  </ul>
+</div>
+
+
+
+
+
+<div class="footer gray">
+  <div class="wrap">
+        <div class="help fn-clear">
+      <div class="helplist">
+        <dl>
+          <dt>关于我们</dt>     
+          
+          <dd><a href="about-1.html" target="_blank">网站介绍</a></dd>
+          
+          <dd><a href="about-2.html" target="_blank">关于我们</a></dd>
+          
+          <dd><a href="about-3.html" target="_blank">服务条款</a></dd>
+          
+          <dd><a href="about-4.html" target="_blank">广告服务</a></dd>
+          
+          <dd><a href="feedback.html" target="_blank">意见反馈</a></dd>     
+        </dl>
+        
+        <dl>
+          <dt>常见问题<s></s></dt>
+          
+          <dd><a href="help-2.html" target="_blank" title="账户类">账户类</a></dd>
+          
+          <dd><a href="help-3.html" target="_blank" title="购物类">购物类</a></dd>
+          
+          <dd><a href="help-4.html" target="_blank" title="款项类">款项类</a></dd>
+          
+          <dd><a href="help-5.html" target="_blank" title="配送类">配送类</a></dd>
+          
+        </dl>
+        
+        <dl>
+          <dt>订单百事通<s></s></dt>
+          
+          <dd><a href="help-11.html" target="_blank" title="提交订单">提交订单</a></dd>
+          
+          <dd><a href="help-12.html" target="_blank" title="订单查询">订单查询</a></dd>
+          
+          <dd><a href="help-13.html" target="_blank" title="订单取消">订单取消</a></dd>
+          
+          <dd><a href="help-15.html" target="_blank" title="订单异常">订单异常</a></dd>
+          
+          <dd><a href="help-14.html" target="_blank" title="交易纠纷">交易纠纷</a></dd>
+          
+        </dl>
+        
+        <dl>
+          <dt>购物指南<s></s></dt>
+          
+          <dd><a href="help-16.html" target="_blank" title="交易条款">交易条款</a></dd>
+          
+          <dd><a href="help-17.html" target="_blank" title="促销咨询">促销咨询</a></dd>
+          
+          <dd><a href="help-18.html" target="_blank" title="购物流程">购物流程</a></dd>
+          
+          <dd><a href="help-19.html" target="_blank" title="商品咨询">商品咨询</a></dd>
+          
+        </dl>
+        
+        <dl>
+          <dt>支付及发票<s></s></dt>
+          
+          <dd><a href="help-20.html" target="_blank" title="支付流程">支付流程</a></dd>
+          
+          <dd><a href="help-21.html" target="_blank" title="在线支付">在线支付</a></dd>
+          
+          <dd><a href="help-22.html" target="_blank" title="公司转账">公司转账</a></dd>
+          
+          <dd><a href="help-23.html" target="_blank" title="支票支付">支票支付</a></dd>
+          
+        </dl>
+        
+        <dl>
+          <dt>售后服务<s></s></dt>
+          
+          <dd><a href="help-24.html" target="_blank" title="售后政策（自营）">售后政策（自营）</a></dd>
+          
+          <dd><a href="help-25.html" target="_blank" title="售后政策（卖家）">售后政策（卖家）</a></dd>
+          
+          <dd><a href="help-26.html" target="_blank" title="返修/退换货申请">返修/退换货申请</a></dd>
+          
+          <dd><a href="help-27.html" target="_blank" title="商品返回">商品返回</a></dd>
+          
+          <dd><a href="help-28.html" target="_blank" title="退款说明">退款说明</a></dd>
+          
+        </dl>
+        
+      </div>
+      <div class="qr">
+        <div class="qr-img"><img src="static/picture/qrcode-httpsihuoniao.cn.jpg">移动版</div>     
+        <div class="qr-img"><img src="static/picture/15687067729028.jpg">微信公众号</div>     
+      </div>
+    </div>
+    <div class="copyright"><p style="text-align: center;">本站非实际运营网站，所载全部信息内容均仅作为软件系统功能测试之用，切勿当真！若有侵权，请即时联系：<a href="javascript:;" target="_self" textvalue="0512-67581578">0512-67581578</a><br>版权所有 © 2018 苏州酷曼软件技术有限公司. All rights reserved.&nbsp;</p><p style="text-align: center;"><a href="javascript:;" target="_blank">苏ICP备13047463号</a></p></div>
+    <div class="statisticscode"></div>
+  </div>
+</div>
+
+
+<div class="dialog_msg fn-hide">
+  <div class="box">
+    <div class="bdt"><div class="bdr"></div></div>
+    <a href="javascript:;" class="close">×</a>
+    <div class="content">
+      <p class="info">手机号<span class="blur"></span>已被注册过，请直接登陆</p>
+      <a href="login.html" class="btn">登录</a>
+      <p class="fpwd">如您忘记密码，点击<a href="fpwd.html" class="blur">找回密码</a></p>
+    </div>
+  </div>
+  <div class="bg"></div>
+</div>
+
+<script type='text/javascript' src='static/js/zh-CN-1600133341.js'></script>
+<script type="text/javascript" src="static/js/common-1600133341.js"></script>
+<script type="text/javascript" src="static/js/gt.js"></script><script type="text/javascript" src="static/js/pay-1600133341.js"></script>
+<script type="text/javascript" src="static/js/register_v1-1600133341.js"></script>
+</body>
+</html>
+<script>var cfg_currency = {"name":"\u4eba\u6c11\u5e01","short":"\u5143","symbol":"\u00a5","code":"RMB","rate":"1"};</script><!-- Processed in page load 0.322434 second(s), 121 queries ,0.011257 second(s) -->

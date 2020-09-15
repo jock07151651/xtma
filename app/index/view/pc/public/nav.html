@@ -1,0 +1,100 @@
+<div class="fixedwrap FestivalAD_header">
+    <div class="fixedpane">
+        <!-- head s -->
+        <div class="wrap header fn-clear">
+            <div class="logo">
+                <a href="/" title="信息频道"><img src="__INDEX__/picture/15694623356800.png" alt="信息频道"></a>
+            </div>
+            <div class="searchwrap y-linear">
+                <div class="search">
+                    <div class="type">
+                        <dl>
+                            <dt><a href="javascript:;" class="keytype">信息</a><em></em></dt>
+                            <dd>
+                                <a href="javascript:;" data-id="0" data-type="list" class="active">信息</a>
+                                <a href="javascript:;" data-id="1" data-type="store_list">商家</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="FormBox">
+                        <form action="https://ihuoniao.cn/sz/info/list.html" method="post" class="form">
+                            <input name="token" id="token" value="b76859e61591e6d9ae698917698e51ebecc13de5" type="hidden">
+                            <div class="inputbox">
+                                <div class="inpbox"><input type="text" name="keywords" class="searchkey" placeholder="输入您想搜索的关键词" value=""></div>
+                            </div>
+                            <div class="subbox search-btn">
+                                <input type="submit" class="submit" value="搜索">
+                            </div>
+                        </form>
+                        <form action="https://ihuoniao.cn/sz/info/store_list.html" class="form fn-hide">
+                            <div class="inputbox">
+                                <div class="inpbox"><input type="text" name="keywords" class="searchkey" placeholder="输入您想搜索的关键词" value=""></div>
+                            </div>
+                            <div class="subbox search-btn">
+                                <input type="submit" class="submit" value="搜索">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="searchkey searchkeys">
+                    <span>热门搜索：</span>
+                    <a href="#" target="_blank"><font color="#92d050">装修公司</font></a>
+                    <a href="#" target="_blank"><font color="#0070c0">实习生</font></a>
+                    <a href="#" target="_blank"><font color="#953734">充话费</font></a>
+                </div>
+            </div>
+
+            <div class="infobox">
+                <a href="login-https2F2Fihuoniao.cn2Fu2Ff1.html" class="fbbox"><i class="ifabu"></i><span>发布信息</span></a>
+            </div>
+            <div class="kefu"><s><img src="__INDEX__/picture/call.png"></s><p>客服热线</p>4003-333-333</div>
+        </div>
+        <!-- head e -->
+
+        <div class="nav-con n-linear ">
+            <div class="wrap fn-clear">
+                <div class="all_cate all_cate2"><span>所有分类</span>
+                    <div class="b-main" id="navlist_wrap">
+                        <div class="NavList">
+                            <ul>
+                                {volist name="categoryRes" id="list"}
+                                <li>
+                                    <a href="{:url('Category/cate_list',array('listID'=>$list.catid))}" class="name">{$list.catname}</a>
+                                    <i class="arrow"></i>
+                                    {volist name="list.children" id="list2"}
+                                    <a href="{:url('Category/cate_list',array('listID'=>$list2.catid))}" title="{$list2.catname}" class="item">{$list2.catname}</a>
+                                    {/volist}
+                                    <div class="sub-category">
+                                        <dl>
+                                            <dt><h2 class="title"><a href="{:url('Category/cate_list',array('listID'=>$list.catid))}">{$list2.catname}</a></h2></dt>
+                                            <dd class="fn-clear">
+                                                <div class="subitem">
+                                                    {volist name="list.childrens" id="list3"}
+                                                    <a href="{:url('Category/cate_list',array('listID'=>$list3.catid))}">{$list3.catname}</a>
+                                                    {/volist}
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                {/volist}
+
+                                <li><a href="{:url('Category/cate_list')}" class="name">更多分类</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="fn-clear nav_ul">
+                    <li class="active"><a href="/" class="curr">首页</a></li>
+                    {volist name="cateFive" id="list"}
+                    <li><a href="{:url('Category/cate_list',array('listID'=>$list.catid))}">{$list.catname}</a></li>
+                    {/volist}
+                </ul>
+                <div class="boxRight">
+                    <a href="javascript:;" target="_blank"><i class="igifs"></i>礼品兑换</a>
+                    <a href="javascript:;" target="_blank"><i class="iqd"></i>今日签到</a>                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<title>切换分站-分类信息网-蚂蚁分类信息系统</title>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="stylesheet" href="static/css/global.css">
+<link rel="stylesheet" href="static/css/style.css">
+<link rel="stylesheet" href="static/css/changecity.css">
+<script src="static/js/noerr.js" type="text/javascript"></script>
+<script src="static/js/global.js" type="text/javascript"></script>
+<script src="static/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="static/js/jquery.autocomplete.min.js"></script> 
+<link rel="stylesheet" href="static/css/jquery.autocomplete.css"><script type="text/javascript">
+var cities = [{ name1: "anqing",name: "aq", to: "安庆" },{ name1: "anshun",name: "anshun", to: "安顺" },{ name1: "anyang",name: "ay", to: "安阳" },{ name1: "anshan",name: "as", to: "鞍山" },{ name1: "alashan",name: "als", to: "阿拉善" },{ name1: "ankang",name: "ankang", to: "安康" },{ name1: "aba",name: "ab", to: "阿坝" },{ name1: "ali",name: "al", to: "阿里" },{ name1: "akesu",name: "aks", to: "阿克苏" },{ name1: "aletai",name: "alt", to: "阿勒泰" },{ name1: "beijing",name: "bj", to: "北京" },{ name1: "bangbu",name: "bb", to: "蚌埠" },{ name1: "bozhou",name: "bozhou", to: "亳州" },{ name1: "baiyin",name: "by", to: "白银" },{ name1: "beihai",name: "bh", to: "北海" },{ name1: "baise",name: "baise", to: "百色" },{ name1: "bijie",name: "bijie", to: "毕节" },{ name1: "baoding",name: "bd", to: "保定" },{ name1: "baishan",name: "baishan", to: "白山" },{ name1: "baicheng",name: "bc", to: "白城" },{ name1: "benxi",name: "bx", to: "本溪" },{ name1: "baotou",name: "bt", to: "包头" },{ name1: "bayannaoer",name: "bynr", to: "巴彦淖尔" },{ name1: "binzhou",name: "bz", to: "滨州" },{ name1: "baoji",name: "baoji", to: "宝鸡" },{ name1: "bazhong",name: "bazhong", to: "巴中" },{ name1: "bayinguoleng",name: "bygl", to: "巴音郭楞" },{ name1: "boertala",name: "betl", to: "博尔塔拉" },{ name1: "baoshan",name: "bs", to: "保山" },{ name1: "chongqing",name: "cq", to: "重庆" },{ name1: "chaozhou",name: "chaozhou", to: "潮州" },{ name1: "chuzhou",name: "chuzhou", to: "滁州" },{ name1: "chaohu",name: "ch", to: "巢湖" },{ name1: "chizhou",name: "chizhou", to: "池州" },{ name1: "chongzuo",name: "chongzuo", to: "崇左" },{ name1: "cangzhou",name: "cangzhou", to: "沧州" },{ name1: "chengde",name: "chengde", to: "承德" },{ name1: "changsha",name: "cs", to: "长沙" },{ name1: "changde",name: "changde", to: "常德" },{ name1: "chenzhou",name: "chenzhou", to: "郴州" },{ name1: "changchun",name: "cc", to: "长春" },{ name1: "changzhou",name: "cz", to: "常州" },{ name1: "chaoyang",name: "cy", to: "朝阳" },{ name1: "chifeng",name: "chifeng", to: "赤峰" },{ name1: "changzhi",name: "changzhi", to: "长治" },{ name1: "chengdu",name: "cd", to: "成都" },{ name1: "changdu",name: "changdu", to: "昌都" },{ name1: "changji",name: "changji", to: "昌吉" },{ name1: "chuxiong",name: "cx", to: "楚雄" },{ name1: "dongguan",name: "dg", to: "东莞" },{ name1: "dingxi",name: "dx", to: "定西" },{ name1: "daqing",name: "dq", to: "大庆" },{ name1: "daxinganling",name: "dxal", to: "大兴安岭" },{ name1: "dalian",name: "dl", to: "大连" },{ name1: "dandong",name: "dandong", to: "丹东" },{ name1: "dongying",name: "dy", to: "东营" },{ name1: "dezhou",name: "dz", to: "德州" },{ name1: "datong",name: "dt", to: "大同" },{ name1: "deyang",name: "deyang", to: "德阳" },{ name1: "dazhou",name: "dazhou", to: "达州" },{ name1: "dali",name: "dali", to: "大理" },{ name1: "dehong",name: "dh", to: "德宏" },{ name1: "diqing",name: "diqing", to: "迪庆" },{ name1: "ezhou",name: "ez", to: "鄂州" },{ name1: "enshi",name: "es", to: "恩施" },{ name1: "eerduosi",name: "erds", to: "鄂尔多斯" },{ name1: "fushan",name: "fs", to: "佛山" },{ name1: "fuyang",name: "fy", to: "阜阳" },{ name1: "fuzhou",name: "fz", to: "福州" },{ name1: "fangchenggang",name: "fcg", to: "防城港" },{ name1: "fuzhou",name: "fuzhou", to: "抚州" },{ name1: "fushun",name: "fushun", to: "抚顺" },{ name1: "fuxin",name: "fx", to: "阜新" },{ name1: "guangzhou",name: "gz", to: "广州" },{ name1: "gannan",name: "gn", to: "甘南" },{ name1: "guilin",name: "gl", to: "桂林" },{ name1: "guigang",name: "gg", to: "贵港" },{ name1: "guiyang",name: "gy", to: "贵阳" },{ name1: "ganzhou",name: "ganzhou", to: "赣州" },{ name1: "guyuan",name: "guyuan", to: "固原" },{ name1: "guoluo",name: "guoluo", to: "果洛" },{ name1: "guangan",name: "ga", to: "广安" },{ name1: "guangyuan",name: "guangyuan", to: "广元" },{ name1: "ganzi",name: "ganzi", to: "甘孜" },{ name1: "huizhou",name: "huizhou", to: "惠州" },{ name1: "heyuan",name: "heyuan", to: "河源" },{ name1: "hangzhou",name: "hz", to: "杭州" },{ name1: "huzhou",name: "huzhou", to: "湖州" },{ name1: "hefei",name: "hf", to: "合肥" },{ name1: "huainan",name: "hn", to: "淮南" },{ name1: "huaibei",name: "huaibei", to: "淮北" },{ name1: "huangshan",name: "huangshan", to: "黄山" },{ name1: "hechi",name: "hc", to: "河池" },{ name1: "hezhou",name: "hezhou", to: "贺州" },{ name1: "haikou",name: "haikou", to: "海口" },{ name1: "handan",name: "hd", to: "邯郸" },{ name1: "hengshui",name: "hs", to: "衡水" },{ name1: "hebi",name: "hb", to: "鹤壁" },{ name1: "haerbin",name: "hrb", to: "哈尔滨" },{ name1: "hegang",name: "hegang", to: "鹤岗" },{ name1: "heihe",name: "heihe", to: "黑河" },{ name1: "huangshi",name: "huangshi", to: "黄石" },{ name1: "huanggang",name: "hg", to: "黄冈" },{ name1: "hengyang",name: "hy", to: "衡阳" },{ name1: "huaihua",name: "hh", to: "怀化" },{ name1: "huaian",name: "ha", to: "淮安" },{ name1: "huludao",name: "hld", to: "葫芦岛" },{ name1: "huhehaote",name: "hu", to: "呼和浩特" },{ name1: "hulunbeier",name: "hlbe", to: "呼伦贝尔" },{ name1: "haidong",name: "haidong", to: "海东" },{ name1: "haibei",name: "haibei", to: "海北" },{ name1: "huangnan",name: "huangnan", to: "黄南" },{ name1: "haixi",name: "hx", to: "海西" },{ name1: "heze",name: "heze", to: "菏泽" },{ name1: "hanzhong",name: "hanzhong", to: "汉中" },{ name1: "hami",name: "hm", to: "哈密" },{ name1: "hetian",name: "ht", to: "和田" },{ name1: "honghe",name: "honghe", to: "红河" },{ name1: "jiangmen",name: "jm", to: "江门" },{ name1: "jieyang",name: "jy", to: "揭阳" },{ name1: "jiaxing",name: "jx", to: "嘉兴" },{ name1: "jinhua",name: "jh", to: "金华" },{ name1: "jiayuguan",name: "jyg", to: "嘉峪关" },{ name1: "jinchang",name: "jc", to: "金昌" },{ name1: "jiuquan",name: "jq", to: "酒泉" },{ name1: "jiaozuo",name: "jiaozuo", to: "焦作" },{ name1: "jixi",name: "jixi", to: "鸡西" },{ name1: "jiamusi",name: "jms", to: "佳木斯" },{ name1: "jingzhou",name: "jingzhou", to: "荆州" },{ name1: "jingmen",name: "jm", to: "荆门" },{ name1: "jilin",name: "jl", to: "吉林" },{ name1: "jingdezhen",name: "jdz", to: "景德镇" },{ name1: "jiujiang",name: "jj", to: "九江" },{ name1: "jian",name: "ja", to: "吉安" },{ name1: "jinzhou",name: "jinzhou", to: "锦州" },{ name1: "jinan",name: "jn", to: "济南" },{ name1: "jining",name: "jining", to: "济宁" },{ name1: "jincheng",name: "jincheng", to: "晋城" },{ name1: "jinzhong",name: "jinzhong", to: "晋中" },{ name1: "kaifeng",name: "kf", to: "开封" },{ name1: "kelamayi",name: "klmy", to: "克拉玛依" },{ name1: "kashi",name: "ks", to: "喀什" },{ name1: "kunming",name: "km", to: "昆明" },{ name1: "lishui",name: "lishui", to: "丽水" },{ name1: "liuan",name: "la", to: "六安" },{ name1: "longyan",name: "longyan", to: "龙岩" },{ name1: "lanzhou",name: "lz", to: "兰州" },{ name1: "longnan",name: "ln", to: "陇南" },{ name1: "linxia",name: "lx", to: "临夏" },{ name1: "liuzhou",name: "liuzhou", to: "柳州" },{ name1: "laibin",name: "lb", to: "来宾" },{ name1: "liupanshui",name: "lps", to: "六盘水" },{ name1: "langfang",name: "lf", to: "廊坊" },{ name1: "luoyang",name: "ly", to: "洛阳" },{ name1: "leihe",name: "lh", to: "漯河" },{ name1: "loudi",name: "ld", to: "娄底" },{ name1: "liaoyuan",name: "liaoyuan", to: "辽源" },{ name1: "lianyungang",name: "lyg", to: "连云港" },{ name1: "liaoyang",name: "liaoyang", to: "辽阳" },{ name1: "laiwu",name: "lw", to: "莱芜" },{ name1: "linyi",name: "linyi", to: "临沂" },{ name1: "liaocheng",name: "lc", to: "聊城" },{ name1: "linfen",name: "linfen", to: "临汾" },{ name1: "lvliang",name: "ll", to: "吕梁" },{ name1: "luzhou",name: "luzhou", to: "泸州" },{ name1: "leshan",name: "ls", to: "乐山" },{ name1: "liangshan",name: "liangshan", to: "凉山" },{ name1: "lasa",name: "lasa", to: "拉萨" },{ name1: "linzhi",name: "linzhi", to: "林芝" },{ name1: "lijiang",name: "lj", to: "丽江" },{ name1: "lincang",name: "lincang", to: "临沧" },{ name1: "maoming",name: "mm", to: "茂名" },{ name1: "meizhou",name: "mz", to: "梅州" },{ name1: "maanshan",name: "mas", to: "马鞍山" },{ name1: "mudanjiang",name: "mdj", to: "牡丹江" },{ name1: "mianyang",name: "mianyang", to: "绵阳" },{ name1: "meishan",name: "meishan", to: "眉山" },{ name1: "ningbo",name: "nb", to: "宁波" },{ name1: "nanping",name: "np", to: "南平" },{ name1: "ningde",name: "nd", to: "宁德" },{ name1: "nanning",name: "nn", to: "南宁" },{ name1: "nanyang",name: "ny", to: "南阳" },{ name1: "nanjing",name: "nj", to: "南京" },{ name1: "nantong",name: "nt", to: "南通" },{ name1: "nanchang",name: "nc", to: "南昌" },{ name1: "nanchong",name: "nanchong", to: "南充" },{ name1: "najiang",name: "neijiang", to: "内江" },{ name1: "naqu",name: "nq", to: "那曲" },{ name1: "nujiang",name: "nujiang", to: "怒江" },{ name1: "putian",name: "pt", to: "莆田" },{ name1: "pingliang",name: "pl", to: "平凉" },{ name1: "puyang",name: "puyang", to: "濮阳" },{ name1: "pingdingshan",name: "pds", to: "平顶山" },{ name1: "pingxiang",name: "px", to: "萍乡" },{ name1: "panjin",name: "pj", to: "盘锦" },{ name1: "panzhihua",name: "pzh", to: "攀枝花" },{ name1: "qingyuan",name: "qingyuan", to: "清远" },{ name1: "quzhou",name: "quzhou", to: "衢州" },{ name1: "quanzhou",name: "qz", to: "泉州" },{ name1: "qingyang",name: "qingyang", to: "庆阳" },{ name1: "qinzhou",name: "qinzhou", to: "钦州" },{ name1: "qiannan",name: "qn", to: "黔南" },{ name1: "qiandongnan",name: "qdn", to: "黔东南" },{ name1: "qianxinan",name: "qxn", to: "黔西南" },{ name1: "qianan",name: "qa", to: "迁安" },{ name1: "qinhuangdao",name: "qhd", to: "秦皇岛" },{ name1: "qiqihaer",name: "qqhr", to: "齐齐哈尔" },{ name1: "qitaihe",name: "qth", to: "七台河" },{ name1: "qingdao",name: "qd", to: "青岛" },{ name1: "qujing",name: "qj", to: "曲靖" },{ name1: "rizhao",name: "rizhao", to: "日照" },{ name1: "rikaze",name: "rkz", to: "日喀则" },{ name1: "shanghai",name: "sh", to: "上海" },{ name1: "shenzhen",name: "sz", to: "深圳" },{ name1: "shantou",name: "st", to: "汕头" },{ name1: "shaoguan",name: "sg", to: "韶关" },{ name1: "shanwei",name: "sw", to: "汕尾" },{ name1: "shaoxing",name: "sx", to: "绍兴" },{ name1: "suzhou",name: "suzhou", to: "宿州" },{ name1: "sanming",name: "sm", to: "三明" },{ name1: "sanya",name: "sanya", to: "三亚" },{ name1: "shijiazhuang",name: "sjz", to: "石家庄" },{ name1: "sanmenxia",name: "smx", to: "三门峡" },{ name1: "shangqiu",name: "sq", to: "商丘" },{ name1: "shuangyashan",name: "sys", to: "双鸭山" },{ name1: "suihua",name: "suihua", to: "绥化" },{ name1: "shiyan",name: "shiyan", to: "十堰" },{ name1: "suizhou",name: "suizhou", to: "随州" },{ name1: "shaoyang",name: "shaoyang", to: "邵阳" },{ name1: "siping",name: "sp", to: "四平" },{ name1: "songyuan",name: "songyuan", to: "松原" },{ name1: "suzhou",name: "su", to: "苏州" },{ name1: "suqian",name: "suqian", to: "宿迁" },{ name1: "shangrao",name: "sr", to: "上饶" },{ name1: "shenyang",name: "sy", to: "沈阳" },{ name1: "shizuishan",name: "szs", to: "石嘴山" },{ name1: "shuozhou",name: "shuozhou", to: "朔州" },{ name1: "shangluo",name: "sl", to: "商洛" },{ name1: "suining",name: "suining", to: "遂宁" },{ name1: "shannan",name: "shannan", to: "山南" },{ name1: "shihezi",name: "shz", to: "石河子" },{ name1: "tianjin",name: "tj", to: "天津" },{ name1: "taizhou",name: "tz", to: "台州" },{ name1: "tongling",name: "tl", to: "铜陵" },{ name1: "tianshui",name: "ts", to: "天水" },{ name1: "tongren",name: "tr", to: "铜仁" },{ name1: "tangshan",name: "ts", to: "唐山" },{ name1: "tonghua",name: "th", to: "通化" },{ name1: "taizhou",name: "taizhou", to: "泰州" },{ name1: "tieling",name: "tl", to: "铁岭" },{ name1: "tongliao",name: "tongliao", to: "通辽" },{ name1: "taian",name: "ta", to: "泰安" },{ name1: "taiyuan",name: "ty", to: "太原" },{ name1: "tongchuan",name: "tc", to: "铜川" },{ name1: "tulufan",name: "tlf", to: "吐鲁番" },{ name1: "tacheng",name: "tacheng", to: "塔城" },{ name1: "wenzhou",name: "wz", to: "温州" },{ name1: "wuhu",name: "wuhu", to: "芜湖" },{ name1: "wuwei",name: "wuwei", to: "武威" },{ name1: "wuzhou",name: "wuzhou", to: "梧州" },{ name1: "wuhan",name: "wh", to: "武汉" },{ name1: "wuxi",name: "wx", to: "无锡" },{ name1: "wuhai",name: "wuhai", to: "乌海" },{ name1: "wulanchabu",name: "wlcb", to: "乌兰察布" },{ name1: "wuzhong",name: "wuzhong", to: "吴忠" },{ name1: "weifang",name: "wf", to: "潍坊" },{ name1: "weihai",name: "weihai", to: "威海" },{ name1: "weinan",name: "wn", to: "渭南" },{ name1: "wulumuqi",name: "wlmq", to: "乌鲁木齐" },{ name1: "wenshan",name: "ws", to: "文山" },{ name1: "xuancheng",name: "xuancheng", to: "宣城" },{ name1: "xiamen",name: "xm", to: "厦门" },{ name1: "xingtai",name: "xt", to: "邢台" },{ name1: "xinyang",name: "xy", to: "信阳" },{ name1: "xinxiang",name: "xx", to: "新乡" },{ name1: "xuchang",name: "xc", to: "许昌" },{ name1: "xiangfan",name: "xf", to: "襄樊" },{ name1: "xianning",name: "xianning", to: "咸宁" },{ name1: "xiaogan",name: "xg", to: "孝感" },{ name1: "xiangtan",name: "xiangtan", to: "湘潭" },{ name1: "xiangxi",name: "xiangxi", to: "湘西" },{ name1: "xuzhou",name: "xz", to: "徐州" },{ name1: "xinyu",name: "xinyu", to: "新余" },{ name1: "xinganmeng",name: "xam", to: "兴安盟" },{ name1: "xilinguole",name: "xlgl", to: "锡林郭勒" },{ name1: "xining",name: "xn", to: "西宁" },{ name1: "xinzhou",name: "xinzhou", to: "忻州" },{ name1: "xian",name: "xa", to: "西安" },{ name1: "xianyang",name: "xianyang", to: "咸阳" },{ name1: "xishuangbanna",name: "xsbn", to: "西双版纳" },{ name1: "yangjiang",name: "yj", to: "阳江" },{ name1: "yunfu",name: "yf", to: "云浮" },{ name1: "yiwu",name: "yiwu", to: "义乌" },{ name1: "yulin",name: "yulin", to: "玉林" },{ name1: "yichun",name: "yich", to: "伊春" },{ name1: "yichang",name: "yichang", to: "宜昌" },{ name1: "yueyang",name: "yy", to: "岳阳" },{ name1: "yiyang",name: "yiyang", to: "益阳" },{ name1: "yongzhou",name: "yongzhou", to: "永州" },{ name1: "yanbian",name: "yanbian", to: "延边" },{ name1: "yangzhou",name: "yz", to: "扬州" },{ name1: "yancheng",name: "yancheng", to: "盐城" },{ name1: "yingtan",name: "yingtan", to: "鹰潭" },{ name1: "yichun",name: "yichun", to: "宜春" },{ name1: "yingkou",name: "yk", to: "营口" },{ name1: "yinchuan",name: "yc", to: "银川" },{ name1: "yushu",name: "ys", to: "玉树" },{ name1: "yantai",name: "yt", to: "烟台" },{ name1: "yangquan",name: "yq", to: "阳泉" },{ name1: "yuncheng",name: "yuncheng", to: "运城" },{ name1: "yanan",name: "yanan", to: "延安" },{ name1: "yulin",name: "yl", to: "榆林" },{ name1: "yibin",name: "yb", to: "宜宾" },{ name1: "yaan",name: "yaan", to: "雅安" },{ name1: "yili",name: "yili", to: "伊犁" },{ name1: "yuxi",name: "yx", to: "玉溪" },{ name1: "zhuhai",name: "zh", to: "珠海" },{ name1: "zhanjiang",name: "zhanjiang", to: "湛江" },{ name1: "zhaoqing",name: "zq", to: "肇庆" },{ name1: "zhongshan",name: "zs", to: "中山" },{ name1: "zhoushan",name: "zhoushan", to: "舟山" },{ name1: "zhangzhou",name: "zhangzhou", to: "漳州" },{ name1: "zhangye",name: "zhangye", to: "张掖" },{ name1: "zunyi",name: "zunyi", to: "遵义" },{ name1: "zhangjiakou",name: "zjk", to: "张家口" },{ name1: "zhengzhou",name: "zz", to: "郑州" },{ name1: "zhumadian",name: "zmd", to: "驻马店" },{ name1: "zhoukou",name: "zk", to: "周口" },{ name1: "zhuzhou",name: "zhuzhou", to: "株洲" },{ name1: "zhangjiajie",name: "zjj", to: "张家界" },{ name1: "zhenjiang",name: "zj", to: "镇江" },{ name1: "zhongwei",name: "zw", to: "中卫" },{ name1: "zibo",name: "zb", to: "淄博" },{ name1: "zaozhuang",name: "zaozhuang", to: "枣庄" },{ name1: "zigong",name: "zg", to: "自贡" },{ name1: "ziyang",name: "zy", to: "资阳" },{ name1: "zhaotong",name: "zt", to: "昭通" }]; 
+$(function() {
+$('#cityname').autocomplete(cities, { 
+max: 20,
+minChars: 0,
+width: 166,
+scrollHeight: 300,
+matchContains: true,
+autoFill: false,
+formatItem: function(row, i, max) { 
+return row.to; 
+}, 
+formatMatch: function(row, i, max) { 
+return row.name1 + row.name + row.to; 
+}, 
+formatResult: function(row) { 
+return row.to; 
+} 
+}); 
+}); 
+</script>
+</head>
+
+<body class="red full bodybgred1">
+<script type="text/javascript">var current_domain="http://demo9.mayicms.com";var current_cityid="";var current_logfile="mayi-member.php";</script>
+<div class="bartop">
+<div class="barcenter">
+<div class="barleft">
+<ul class="barcity">欢迎来到分类信息网-蚂蚁分类信息系统！</ul> 
+<ul class="line"><u></u></ul>
+            <ul class="barcang"><a href="files/desktop.php" target="_blank" title="点击右键，选择“目标另存为”，将此快捷方式保存到桌面即可">保存到桌面</a></ul>
+<ul class="line"><u></u></ul>
+<ul class="barpost"><a href="javascript:;">快速发布信息</a></ul>
+<ul class="line"><u></u></ul>
+<ul class="bardel"><a href="javascript:;" rel="nofollow">修改/删除信息</a></ul>
+<ul class="line"><u></u></ul>
+<ul class="barwap"><a href="javascript:;">手机浏览</a></ul>
+</div>
+<div class="barright" id="mayilogin"><img src="static/picture/loading.gif" border="0" align="absmiddle"></div>
+</div>
+</div>
+<div class="clear5"></div>
+<div id="ad_topbanner"></div>
+<div class="clear"></div>
+<div class="body1000">
+<div id="main" class="wrapper">
+<div class="changecitydiv">
+<div class="vhd">
+            	<div class="vhd_c"><a href="javascript:;"><img src="static/picture/logo.gif" title="分类信息网-蚂蚁分类信息系统" border="0"></a></div>
+</div>
+<div class="clear15"></div>
+            <div class="clear"></div>
+            
+<div id="blist">
+            	
+            	<div class="blistl">
+                                	<a href="javascript:;" class="vsubmit">访问总站 &raquo;</a>
+                                <form style="float:left;" id="changcityForm" action="http://demo9.mayicms.com/changecity.php?" method="post">
+                <input type="text" placeholder="或直接输入分站名" class="focus2" onblur="this.className='focus2'" onfocus="this.className='focus1'" id="cityname" name="cityname" value="">
+                <input type="submit" value="进入分站" class="msubmit">
+                </form>
+                </div>
+            	<div class="blistr">
+                热门分站：
+                                                                    <a href="index1.html">北京</a>
+                                    <a href="index2.html">上海</a>
+                                    <a href="index3.html">天津</a>
+                                    <a href="index4.html">重庆</a>
+                                    <a href="index5.html">广州</a>
+                                    <a href="index6.html">深圳</a>
+                                    <a href="index7.html">杭州</a>
+                                    <a href="index8.html">福州</a>
+                                    <a href="index9.html">厦门</a>
+                                    <a href="index10.html">石家庄</a>
+                                    <a href="index.html">郑州</a>
+                                    <a href="index11.html">武汉</a>
+                                    <a href="index12.html">长沙</a>
+                                    <a href="index13.html">南京</a>
+                                    <a href="index14.html">南昌</a>
+                                    <a href="index15.html">西安</a>
+                                    <a href="index16.html">成都</a>
+                                </div>
+            </div>
+            
+            <div class="clearfix"></div>
+            
+<dl id="clist" class="pinyin">
+                                        <a name="alphabet-A"></a>
+<div class="lister">
+<dt>A</dt>
+<dd>
+                <a href="javascript:;">安庆</a>
+<a href="javascript:;">安顺</a>
+<a href="javascript:;">安阳</a>
+<a href="javascript:;">鞍山</a>
+<a href="javascript:;">阿拉善</a>
+<a href="javascript:;">安康</a>
+<a href="javascript:;">阿坝</a>
+<a href="javascript:;">阿里</a>
+<a href="javascript:;">阿克苏</a>
+<a href="javascript:;">阿勒泰</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-B"></a>
+<div class="lister">
+<dt>B</dt>
+<dd>
+                <a href="index1.html" class="fontred">北京</a>
+<a href="javascript:;">蚌埠</a>
+<a href="javascript:;">亳州</a>
+<a href="javascript:;">白银</a>
+<a href="javascript:;">北海</a>
+<a href="javascript:;">百色</a>
+<a href="javascript:;">毕节</a>
+<a href="javascript:;">保定</a>
+<a href="javascript:;">白山</a>
+<a href="javascript:;">白城</a>
+<a href="javascript:;">本溪</a>
+<a href="javascript:;">包头</a>
+<a href="javascript:;">巴彦淖尔</a>
+<a href="javascript:;">滨州</a>
+<a href="javascript:;">宝鸡</a>
+<a href="javascript:;">巴中</a>
+<a href="javascript:;">巴音郭楞</a>
+<a href="javascript:;">博尔塔拉</a>
+<a href="javascript:;">保山</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-C"></a>
+<div class="lister">
+<dt>C</dt>
+<dd>
+                <a href="index4.html" class="fontred">重庆</a>
+<a href="javascript:;">潮州</a>
+<a href="javascript:;">滁州</a>
+<a href="javascript:;">巢湖</a>
+<a href="javascript:;">池州</a>
+<a href="javascript:;">崇左</a>
+<a href="javascript:;">沧州</a>
+<a href="javascript:;">承德</a>
+<a href="index12.html" class="fontred">长沙</a>
+<a href="javascript:;">常德</a>
+<a href="javascript:;">郴州</a>
+<a href="javascript:;">长春</a>
+<a href="javascript:;">常州</a>
+<a href="javascript:;">朝阳</a>
+<a href="javascript:;">赤峰</a>
+<a href="javascript:;">长治</a>
+<a href="index16.html" class="fontred">成都</a>
+<a href="javascript:;">昌都</a>
+<a href="javascript:;">昌吉</a>
+<a href="javascript:;">楚雄</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-D"></a>
+<div class="lister">
+<dt>D</dt>
+<dd>
+                <a href="javascript:;">东莞</a>
+<a href="javascript:;">定西</a>
+<a href="javascript:;">大庆</a>
+<a href="javascript:;">大兴安岭</a>
+<a href="javascript:;">大连</a>
+<a href="javascript:;">丹东</a>
+<a href="javascript:;">东营</a>
+<a href="javascript:;">德州</a>
+<a href="javascript:;">大同</a>
+<a href="javascript:;">德阳</a>
+<a href="javascript:;">达州</a>
+<a href="javascript:;">大理</a>
+<a href="javascript:;">德宏</a>
+<a href="javascript:;">迪庆</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-E"></a>
+<div class="lister">
+<dt>E</dt>
+<dd>
+                <a href="javascript:;">鄂州</a>
+<a href="javascript:;">恩施</a>
+<a href="javascript:;">鄂尔多斯</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-F"></a>
+<div class="lister">
+<dt>F</dt>
+<dd>
+                <a href="javascript:;">佛山</a>
+<a href="javascript:;">阜阳</a>
+<a href="index8.html" class="fontred">福州</a>
+<a href="javascript:;">防城港</a>
+<a href="javascript:;">抚州</a>
+<a href="javascript:;">抚顺</a>
+<a href="javascript:;">阜新</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-G"></a>
+<div class="lister">
+<dt>G</dt>
+<dd>
+                <a href="index5.html" class="fontred">广州</a>
+<a href="javascript:;">甘南</a>
+<a href="javascript:;">桂林</a>
+<a href="javascript:;">贵港</a>
+<a href="javascript:;">贵阳</a>
+<a href="javascript:;">赣州</a>
+<a href="javascript:;">固原</a>
+<a href="javascript:;">果洛</a>
+<a href="javascript:;">广安</a>
+<a href="javascript:;">广元</a>
+<a href="javascript:;">甘孜</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-H"></a>
+<div class="lister">
+<dt>H</dt>
+<dd>
+                <a href="javascript:;">惠州</a>
+<a href="javascript:;">河源</a>
+<a href="index7.html" class="fontred">杭州</a>
+<a href="javascript:;">湖州</a>
+<a href="javascript:;">合肥</a>
+<a href="javascript:;">淮南</a>
+<a href="javascript:;">淮北</a>
+<a href="javascript:;">黄山</a>
+<a href="javascript:;">河池</a>
+<a href="javascript:;">贺州</a>
+<a href="javascript:;">海口</a>
+<a href="javascript:;">邯郸</a>
+<a href="javascript:;">衡水</a>
+<a href="javascript:;">鹤壁</a>
+<a href="javascript:;">哈尔滨</a>
+<a href="javascript:;">鹤岗</a>
+<a href="javascript:;">黑河</a>
+<a href="javascript:;">黄石</a>
+<a href="javascript:;">黄冈</a>
+<a href="javascript:;">衡阳</a>
+<a href="javascript:;">怀化</a>
+<a href="javascript:;">淮安</a>
+<a href="javascript:;">葫芦岛</a>
+<a href="javascript:;">呼和浩特</a>
+<a href="javascript:;">呼伦贝尔</a>
+<a href="javascript:;">海东</a>
+<a href="javascript:;">海北</a>
+<a href="javascript:;">黄南</a>
+<a href="javascript:;">海西</a>
+<a href="javascript:;">菏泽</a>
+<a href="javascript:;">汉中</a>
+<a href="javascript:;">哈密</a>
+<a href="javascript:;">和田</a>
+<a href="javascript:;">红河</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-J"></a>
+<div class="lister">
+<dt>J</dt>
+<dd>
+                <a href="javascript:;">江门</a>
+<a href="javascript:;">揭阳</a>
+<a href="javascript:;">嘉兴</a>
+<a href="javascript:;">金华</a>
+<a href="javascript:;">嘉峪关</a>
+<a href="javascript:;">金昌</a>
+<a href="javascript:;">酒泉</a>
+<a href="javascript:;">焦作</a>
+<a href="javascript:;">鸡西</a>
+<a href="javascript:;">佳木斯</a>
+<a href="javascript:;">荆州</a>
+<a href="javascript:;">荆门</a>
+<a href="javascript:;">吉林</a>
+<a href="javascript:;">景德镇</a>
+<a href="javascript:;">九江</a>
+<a href="javascript:;">吉安</a>
+<a href="javascript:;">锦州</a>
+<a href="javascript:;">济南</a>
+<a href="javascript:;">济宁</a>
+<a href="javascript:;">晋城</a>
+<a href="javascript:;">晋中</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-K"></a>
+<div class="lister">
+<dt>K</dt>
+<dd>
+                <a href="javascript:;">开封</a>
+<a href="javascript:;">克拉玛依</a>
+<a href="javascript:;">喀什</a>
+<a href="javascript:;">昆明</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-L"></a>
+<div class="lister">
+<dt>L</dt>
+<dd>
+                <a href="javascript:;">丽水</a>
+<a href="javascript:;">六安</a>
+<a href="javascript:;">龙岩</a>
+<a href="javascript:;">兰州</a>
+<a href="javascript:;">陇南</a>
+<a href="javascript:;">临夏</a>
+<a href="javascript:;">柳州</a>
+<a href="javascript:;">来宾</a>
+<a href="javascript:;">六盘水</a>
+<a href="javascript:;">廊坊</a>
+<a href="javascript:;">洛阳</a>
+<a href="javascript:;">漯河</a>
+<a href="javascript:;">娄底</a>
+<a href="javascript:;">辽源</a>
+<a href="javascript:;">连云港</a>
+<a href="javascript:;">辽阳</a>
+<a href="javascript:;">莱芜</a>
+<a href="javascript:;">临沂</a>
+<a href="javascript:;">聊城</a>
+<a href="javascript:;">临汾</a>
+<a href="javascript:;">吕梁</a>
+<a href="javascript:;">泸州</a>
+<a href="javascript:;">乐山</a>
+<a href="javascript:;">凉山</a>
+<a href="javascript:;">拉萨</a>
+<a href="javascript:;">林芝</a>
+<a href="javascript:;">丽江</a>
+<a href="javascript:;">临沧</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-M"></a>
+<div class="lister">
+<dt>M</dt>
+<dd>
+                <a href="javascript:;">茂名</a>
+<a href="javascript:;">梅州</a>
+<a href="javascript:;">马鞍山</a>
+<a href="javascript:;">牡丹江</a>
+<a href="javascript:;">绵阳</a>
+<a href="javascript:;">眉山</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-N"></a>
+<div class="lister">
+<dt>N</dt>
+<dd>
+                <a href="javascript:;">宁波</a>
+<a href="javascript:;">南平</a>
+<a href="javascript:;">宁德</a>
+<a href="javascript:;">南宁</a>
+<a href="javascript:;">南阳</a>
+<a href="index13.html" class="fontred">南京</a>
+<a href="javascript:;">南通</a>
+<a href="index14.html" class="fontred">南昌</a>
+<a href="javascript:;">南充</a>
+<a href="javascript:;">内江</a>
+<a href="javascript:;">那曲</a>
+<a href="javascript:;">怒江</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-P"></a>
+<div class="lister">
+<dt>P</dt>
+<dd>
+                <a href="javascript:;">莆田</a>
+<a href="javascript:;">平凉</a>
+<a href="javascript:;">濮阳</a>
+<a href="javascript:;">平顶山</a>
+<a href="javascript:;">萍乡</a>
+<a href="javascript:;">盘锦</a>
+<a href="javascript:;">攀枝花</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-Q"></a>
+<div class="lister">
+<dt>Q</dt>
+<dd>
+                <a href="javascript:;">清远</a>
+<a href="javascript:;">衢州</a>
+<a href="javascript:;">泉州</a>
+<a href="javascript:;">庆阳</a>
+<a href="javascript:;">钦州</a>
+<a href="javascript:;">黔南</a>
+<a href="javascript:;">黔东南</a>
+<a href="javascript:;">黔西南</a>
+<a href="javascript:;">迁安</a>
+<a href="javascript:;">秦皇岛</a>
+<a href="javascript:;">齐齐哈尔</a>
+<a href="javascript:;">七台河</a>
+<a href="javascript:;">青岛</a>
+<a href="javascript:;">曲靖</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-R"></a>
+<div class="lister">
+<dt>R</dt>
+<dd>
+                <a href="javascript:;">日照</a>
+<a href="javascript:;">日喀则</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-S"></a>
+<div class="lister">
+<dt>S</dt>
+<dd>
+                <a href="index2.html" class="fontred">上海</a>
+<a href="index6.html" class="fontred">深圳</a>
+<a href="javascript:;">汕头</a>
+<a href="javascript:;">韶关</a>
+<a href="javascript:;">汕尾</a>
+<a href="javascript:;">绍兴</a>
+<a href="javascript:;">宿州</a>
+<a href="javascript:;">三明</a>
+<a href="javascript:;">三亚</a>
+<a href="index10.html" class="fontred">石家庄</a>
+<a href="javascript:;">三门峡</a>
+<a href="javascript:;">商丘</a>
+<a href="javascript:;">双鸭山</a>
+<a href="javascript:;">绥化</a>
+<a href="javascript:;">十堰</a>
+<a href="javascript:;">随州</a>
+<a href="javascript:;">邵阳</a>
+<a href="javascript:;">四平</a>
+<a href="javascript:;">松原</a>
+<a href="javascript:;">苏州</a>
+<a href="javascript:;">宿迁</a>
+<a href="javascript:;">上饶</a>
+<a href="javascript:;">沈阳</a>
+<a href="javascript:;">石嘴山</a>
+<a href="javascript:;">朔州</a>
+<a href="javascript:;">商洛</a>
+<a href="javascript:;">遂宁</a>
+<a href="javascript:;">山南</a>
+<a href="javascript:;">石河子</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-T"></a>
+<div class="lister">
+<dt>T</dt>
+<dd>
+                <a href="index3.html" class="fontred">天津</a>
+<a href="javascript:;">台州</a>
+<a href="javascript:;">铜陵</a>
+<a href="javascript:;">天水</a>
+<a href="javascript:;">铜仁</a>
+<a href="javascript:;">唐山</a>
+<a href="javascript:;">通化</a>
+<a href="javascript:;">泰州</a>
+<a href="javascript:;">铁岭</a>
+<a href="javascript:;">通辽</a>
+<a href="javascript:;">泰安</a>
+<a href="javascript:;">太原</a>
+<a href="javascript:;">铜川</a>
+<a href="javascript:;">吐鲁番</a>
+<a href="javascript:;">塔城</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-W"></a>
+<div class="lister">
+<dt>W</dt>
+<dd>
+                <a href="javascript:;">温州</a>
+<a href="javascript:;">芜湖</a>
+<a href="javascript:;">武威</a>
+<a href="javascript:;">梧州</a>
+<a href="index11.html" class="fontred">武汉</a>
+<a href="javascript:;">无锡</a>
+<a href="javascript:;">乌海</a>
+<a href="javascript:;">乌兰察布</a>
+<a href="javascript:;">吴忠</a>
+<a href="javascript:;">潍坊</a>
+<a href="javascript:;">威海</a>
+<a href="javascript:;">渭南</a>
+<a href="javascript:;">乌鲁木齐</a>
+<a href="javascript:;">文山</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-X"></a>
+<div class="lister">
+<dt>X</dt>
+<dd>
+                <a href="javascript:;">宣城</a>
+<a href="index9.html" class="fontred">厦门</a>
+<a href="javascript:;">邢台</a>
+<a href="javascript:;">信阳</a>
+<a href="javascript:;">新乡</a>
+<a href="javascript:;">许昌</a>
+<a href="javascript:;">襄樊</a>
+<a href="javascript:;">咸宁</a>
+<a href="javascript:;">孝感</a>
+<a href="javascript:;">湘潭</a>
+<a href="javascript:;">湘西</a>
+<a href="javascript:;">徐州</a>
+<a href="javascript:;">新余</a>
+<a href="javascript:;">兴安盟</a>
+<a href="javascript:;">锡林郭勒</a>
+<a href="javascript:;">西宁</a>
+<a href="javascript:;">忻州</a>
+<a href="index15.html" class="fontred">西安</a>
+<a href="javascript:;">咸阳</a>
+<a href="javascript:;">西双版纳</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-Y"></a>
+<div class="lister">
+<dt>Y</dt>
+<dd>
+                <a href="javascript:;">阳江</a>
+<a href="javascript:;">云浮</a>
+<a href="javascript:;">义乌</a>
+<a href="javascript:;">玉林</a>
+<a href="javascript:;">伊春</a>
+<a href="javascript:;">宜昌</a>
+<a href="javascript:;">岳阳</a>
+<a href="javascript:;">益阳</a>
+<a href="javascript:;">永州</a>
+<a href="javascript:;">延边</a>
+<a href="javascript:;">扬州</a>
+<a href="javascript:;">盐城</a>
+<a href="javascript:;">鹰潭</a>
+<a href="javascript:;">宜春</a>
+<a href="javascript:;">营口</a>
+<a href="javascript:;">银川</a>
+<a href="javascript:;">玉树</a>
+<a href="javascript:;">烟台</a>
+<a href="javascript:;">阳泉</a>
+<a href="javascript:;">运城</a>
+<a href="javascript:;">延安</a>
+<a href="javascript:;">榆林</a>
+<a href="javascript:;">宜宾</a>
+<a href="javascript:;">雅安</a>
+<a href="javascript:;">伊犁</a>
+<a href="javascript:;">玉溪</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+                <a name="alphabet-Z"></a>
+<div class="lister">
+<dt>Z</dt>
+<dd>
+                <a href="javascript:;">珠海</a>
+<a href="javascript:;">湛江</a>
+<a href="javascript:;">肇庆</a>
+<a href="javascript:;">中山</a>
+<a href="javascript:;">舟山</a>
+<a href="javascript:;">漳州</a>
+<a href="javascript:;">张掖</a>
+<a href="javascript:;">遵义</a>
+<a href="javascript:;">张家口</a>
+<a href="index.html" class="fontred">郑州</a>
+<a href="javascript:;">驻马店</a>
+<a href="javascript:;">周口</a>
+<a href="javascript:;">株洲</a>
+<a href="javascript:;">张家界</a>
+<a href="javascript:;">镇江</a>
+<a href="javascript:;">中卫</a>
+<a href="javascript:;">淄博</a>
+<a href="javascript:;">枣庄</a>
+<a href="javascript:;">自贡</a>
+<a href="javascript:;">资阳</a>
+<a href="javascript:;">昭通</a>
+</dd>
+</div>
+<div class="clearfix"></div>
+</dl>
+</div>
+</div>
+    <div class="footer">	&copy; 分类信息网-蚂蚁分类信息系统 <a href="javascript:;" rel="nofollow" target="_blank"></a>  <span class="none_0"></span><span class="my_mps"><strong><a href="74b8d0d9b9.html" target="_blank">MayiCMS</a></strong> <em><a href="javascript:;" target="_blank">5.9SE GBK</a></em></span></div></div>
+</body>
+</html>
+<p id="back-to-top"><a href="#top"><span></span></a></p>
+<script type="text/javascript">loadDefault(["mayilogin","scrolltop"]);</script>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+    <title>用户注册</title>
+    <link rel="stylesheet" type="text/css" href="__INDEX__/css/base-1600133341.css" media="all">
+    <link rel="stylesheet" type="text/css" href="__INDEX__/css/pay-1600133341.css" media="all">
+    <link rel="stylesheet" type="text/css" href="__INDEX__/css/pay_list-1600133341.css" media="all">
+    <link rel="stylesheet" type="text/css" href="__INDEX__/css/register_v1-1600133341.css" media="all">
+    <script type="text/javascript" src="__INDEX__/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="__INDEX__/js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        var masterDomain = 'https://ihuoniao.cn', userDomain = 'https://ihuoniao.cn/u';
+        var criticalPoint = 1240, criticalClass = "w1200";
+        $("html").addClass($(window).width() > criticalPoint ? criticalClass : "");
+        var geetest = 1,type =1;
+    </script>
+    <!-- 对表单样式进行更改 -->
+    <style>
+        .register .tab-nav li{width:33%;}
+        .register .tab-head .mark{width: 323px;}
+    </style>
+</head>
+
+<body>
+<script type="text/javascript">var cookiePre = 'HN_', cfg_clihost = 'ihuoniao.cn', cfg_module = 'member',cfg_cityInfo = ''; </script>
+
+<!-- 多语言 -->
+<script src="__INDEX__/js/zh-CN-1600133341.js"></script>
+
+<!-- 顶部信息 s -->
+{include file="pc/public/top" /}
+<!-- 顶部信息 e -->
+<script type="text/template" id="notLoginHtml">
+    <div class="loginbefore fn-clear" id="navLoginAfter">
+        <a href="https://ihuoniao.cn/register.html" class="regist">注册</a>
+        <span class="fn-left">&nbsp;/&nbsp;</span>
+        <span class="logint"><a href="https://ihuoniao.cn/login.html">登录</a></span>
+
+        <a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=qq" title="QQ快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/qq/img/24.png" /></i></a>
+
+        <a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=alipay" title="支付宝快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/alipay/img/24.png" /></i></a>
+
+        <a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=wechat" title="微信快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/wechat/img/24.png" /></i></a>
+    </div>
+</script>
+
+
+<!-- head s -->
+<div class="wrap header fn-clear">
+    <div class="logo">
+        <a href="/" title="地方门户-门户网-火鸟门户系统官方演示站">
+            <img src="__INDEX__/picture/15687069614961.png" alt="地方门户-门户网-火鸟门户系统官方演示站">
+            <div class="shortname"><h2>火鸟门户</h2><p>地方最大最全生活网</p></div>
+        </a>
+    </div>
+    <dl class="kefu fn-clear">
+        <dt><img src="__INDEX__/picture/kf_tel.png" alt=""></dt>
+        <dd>
+            <p class="p1">客服热线</p>
+            <p class="p2">0512-67581578</p>
+        </dd>
+    </dl>
+</div>
+
+<div class="split-line"></div>
+
+<!-- head e -->
+<div class="wrap">
+    <div class="registerwrap fn-clear">
+        <div class="register">
+            <div class="tab-head">
+                <ul class="tab-nav fn-clear">
+                    <li data-type="1" class="icon1 active"><a href="javascript:;"><span>用户名注册</span></a></li>
+                    <li data-type="2" class="icon2"><a href="javascript:;"><span>手机注册</span></a></li>
+                    <li data-type="3" class="icon2"><a href="javascript:;"><span>邮箱注册</span></a></li>
+                </ul>
+                <div class="mark"></div>
+            </div>
+            <div class="tab-body">
+                <div class="tab-pane">
+                    <form action="" method="post" class="registform">
+                        <input name="token" id="token" value="669b4a845f54cc427d36731ea0ee5cdd8fd93462" type="hidden">
+                        <input type="hidden" name="areaCode" id="areaCode" value="86">
+                        <div class="ftype ftype01" style="display: block;">
+                            <div class="form-row">
+                                <dl class="fn-clear">
+                                    <dt>用户名</dt>
+                                    <dd>
+                                        <div class="fn-clear">
+                                            <div class="inpbox fn-left">
+                                                <input type="text" name="username" class="username1" value="" placeholder="请输入您的用户名">
+                                            </div>
+                                            <div class="error fn-left"><em></em><i class="error-icon"></i><span>请输入您的用户名账号</span></div>
+                                        </div>
+                                        <p class="tips">*注册成功后即可使用用户名账号登录</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="form-row">
+                                <dl class="fn-clear">
+                                    <dt>设置密码</dt>
+                                    <dd class="fn-clear">
+                                        <div class="inpbox fn-left">
+                                            <input type="password" class="password password1" name="" value="" placeholder="密码设置为6个字符"><i class="psw-show"></i>
+                                            <p class="tips">*密码不能是6位以下纯数字/字母/半角符号，字母区分大小写</p>
+                                        </div>
+                                        <div class="error fn-left"><em></em><i class="error-icon"></i><span>请填写密码</span></div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="form-row">
+                                <dl class="fn-clear">
+                                    <dt>真实姓名</dt>
+                                    <dd>
+                                        <div class="fn-clear">
+                                            <div class="inpbox fn-left"><input type="text" name="nickname" class="nickname" value="" placeholder="请输入您的真实姓名"></div>
+                                            <div class="error fn-left"><em></em><i class="error-icon"></i><span>请输入您的真实姓名</span></div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="form-row">
+                                <dl class="fn-clear">
+                                    <dt>邮箱</dt>
+                                    <dd>
+                                        <div class="fn-clear">
+                                            <div class="inpbox fn-left"><input type="text" name="email" class="email" value="" placeholder="请输入您的邮箱账号"></div>
+                                            <div class="error fn-left"><em></em><i class="error-icon"></i><span>请填写邮箱</span></div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="form-row">
+                                <dl class="fn-clear">
+                                    <dt>手机</dt>
+                                    <dd>
+                                        <div class="fn-clear">
+                                            <div class="inpbox fn-left">
+                                                <div class="inpbdr">
+                                                    <span class="areaCode"><i>+86</i><s></s></span>
+                                                    <input maxlength="11" type="text" name="phone" class="phone" value="" placeholder="请输入您的手机号">
+                                                </div>
+
+                                                <div class="areaCode_wrap areaCode_wrap2">
+                                                    <ul>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="error fn-left"><em></em><i class="error-icon"></i><span>请填写手机号</span></div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="form-row">
+                                <dl class="fn-clear">
+                                    <dt>验证码</dt>
+                                    <dd>
+                                        <div class="fn-clear">
+                                            <div class="inpbox fn-left"><input type="text" name="vericode" class="vericode" value="" placeholder="请填写验证码"></div><img src="__INDEX__/picture/vdimgck.jpg" title="看不清？点击换一张" id="verifycode">
+                                            <div style="float:right;" class="error fn-left"><em></em><i class="error-icon"></i><span>请填写验证码</span></div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="ftype ftype02">
+                            <div class="form-row">
+                                <dl class="fn-clear">
+                                    <dt>手机号码</dt>
+                                    <dd class="fn-clear">
+                                        <div class="dropdown-menu fn-left"><a href="javascript:;" class="droptab" id="J-countryMobileCode"><label>86</label><i class="droparrow"></i></a></div>
+                                        <div class="inpbox fn-left">
+                                            <input type="text" name="" value="" placeholder="请输入您的手机号" class="username3">
+                                            <p class="tips">*注册成功后即可使用手机号登录</p>
+                                        </div>
+                                        <div class="error fn-left"><em></em><i class="error-icon"></i><span>手机号码格式不正确</span></div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="form-row">
+                                <dl class="fn-clear">
+                                    <dt>验证码</dt>
+                                    <dd class="fn-clear">
+                                        <div class="inpbox fn-left">
+                                            <input type="text" name="" class="yzm3" value="" placeholder="请输入您的手机验证码">
+                                        </div>
+                                        <a href="javascript:;" class="sendvdimgck sendvdimgck3 fn-left">获取验证码</a>
+                                        <a href="javascript:;" class="djs3"></a>
+                                        <div class="error fn-left"><em></em><i class="error-icon"></i><span>验证码不正确</span></div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="form-row">
+                                <dl class="fn-clear">
+                                    <dt>设置密码</dt>
+                                    <dd class="fn-clear">
+                                        <div class="inpbox fn-left">
+                                            <input type="password" class="password password3" name="" value="" placeholder="密码设置为6个字符"><i class="psw-show"></i>
+                                            <p class="tips">*密码不能是6位以下纯数字/字母/半角符号，字母区分大小写</p>
+                                        </div>
+                                        <div class="error fn-left"><em></em><i class="error-icon"></i><span>请填写密码</span></div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="form-row">
+                                <dl class="fn-clear">
+                                    <dt>确认密码</dt>
+                                    <dd class="fn-clear">
+                                        <div class="inpbox fn-left">
+                                            <input type="password" class="repassword3" name="" value="" placeholder="请再次输入密码">
+                                        </div>
+                                        <div class="error fn-left"><em></em><i class="error-icon"></i>两次密码输入不一样</div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="ftype ftype03">
+                            <div class="form-row">
+                                <dl class="fn-clear">
+                                    <dt>邮箱账号</dt>
+                                    <dd>
+                                        <div class="fn-clear">
+                                            <div class="inpbox fn-left">
+                                                <input type="text" name="" class="username2" value="" placeholder="请输入您的邮箱账号">
+                                            </div>
+                                            <div class="error fn-left"><em></em><i class="error-icon"></i><span>请输入您的邮箱账号</span></div>
+                                        </div>
+                                        <p class="tips">*注册成功后即可使用邮箱账号登录</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="form-row">
+                                <dl class="fn-clear">
+                                    <dt>验证码</dt>
+                                    <dd class="fn-clear">
+                                        <div class="inpbox fn-left">
+                                            <input type="text" name="" class="yzm2" value="" placeholder="请输入您的邮箱验证码">
+                                        </div>
+                                        <a href="javascript:;" class="sendvdimgck sendvdimgck2 fn-left">获取验证码</a>
+                                        <a href="javascript:;" class="djs2"></a>
+                                        <div class="error fn-left"><em></em><i class="error-icon"></i><span>验证码不正确</span></div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="form-row">
+                                <dl class="fn-clear">
+                                    <dt>设置密码</dt>
+                                    <dd class="fn-clear">
+                                        <div class="inpbox fn-left">
+                                            <input type="password" class="password2" name="" value="" placeholder="密码设置为6个字符"><i class="psw-show"></i>
+                                            <p class="tips">*密码不能是6位以下纯数字/字母/半角符号，字母区分大小写</p>
+                                        </div>
+                                        <div class="error fn-left"><em></em><i class="error-icon"></i><span>请填写密码</span></div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="form-row">
+                                <dl class="fn-clear">
+                                    <dt>确认密码</dt>
+                                    <dd class="fn-clear">
+                                        <div class="inpbox fn-left">
+                                            <input type="password" class="repassword2" name="" value="" placeholder="请再次输入密码">
+                                        </div>
+                                        <div class="error fn-left"><em></em><i class="error-icon"></i>两次密码输入不一样</div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <dl class="fn-clear">
+                                <dt></dt>
+                                <dd>
+                                    <div class="agreement">
+                                        <label class="checked"><i class="regicon iconcheck"></i>同意</label>
+                                        <a href="protocol-8.html" target="_blank">《会员注册协议》</a>
+                                    </div>
+                                    <input type="submit" value="立即注册" class="submit">
+                                </dd>
+                            </dl>
+                        </div>
+                        <div id="popup-captcha"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ui-select" data-widget-cid="widget-1" style="z-index: 99; display: none; position: absolute;">
+    <ul class="ui-select-content" data-role="content">
+    </ul>
+</div>
+
+<!--底部-->
+{include file="pc/public/user_footer" /}
+<!--底部-->
+<div class="dialog_msg fn-hide">
+    <div class="box">
+        <div class="bdt"><div class="bdr"></div></div>
+        <a href="javascript:;" class="close">×</a>
+        <div class="content">
+            <p class="info">手机号<span class="blur"></span>已被注册过，请直接登陆</p>
+            <a href="login.html" class="btn">登录</a>
+            <p class="fpwd">如您忘记密码，点击<a href="fpwd.html" class="blur">找回密码</a></p>
+        </div>
+    </div>
+    <div class="bg"></div>
+</div>
+
+<script type='text/javascript' src='static/js/zh-CN-1600133341.js'></script>
+<script type="text/javascript" src="__INDEX__/js/common-1600133341.js"></script>
+<script type="text/javascript" src="__INDEX__/js/gt.js"></script><script type="text/javascript" src="__INDEX__/js/pay-1600133341.js"></script>
+<script type="text/javascript" src="__INDEX__/js/register_v1-1600133341.js"></script>
+</body>
+</html>
+<script>var cfg_currency = {"name":"\u4eba\u6c11\u5e01","short":"\u5143","symbol":"\u00a5","code":"RMB","rate":"1"};</script><!-- Processed in page load 0.322434 second(s), 121 queries ,0.011257 second(s) -->

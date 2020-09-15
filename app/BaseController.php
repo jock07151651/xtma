@@ -3,6 +3,8 @@ declare (strict_types = 1);
 
 namespace app;
 
+use app\index\model\Category as CategoryModel;
+use catetree\Catetree;
 use think\App;
 use think\exception\ValidateException;
 use think\Validate;
@@ -12,6 +14,8 @@ use think\Validate;
  */
 abstract class BaseController
 {
+    public $cateFive;       // nav导航栏
+    public $categoryRes;    // 顶级和二级栏目
     /**
      * Request实例
      * @var \think\Request
@@ -51,8 +55,9 @@ abstract class BaseController
     }
 
     // 初始化
-    protected function initialize()
-    {}
+    protected function initialize() {
+        $this->_getCateFive();
+    }
 
     /**
      * 验证数据
@@ -89,6 +94,25 @@ abstract class BaseController
         }
 
         return $v->failException(true)->check($data);
+    }
+
+    // 前台
+    public function _getCateFive() {
+        $category = new CategoryModel();
+
+        // 获取顶级和二级栏目
+        $categoryRes = $category->getCates();
+
+        // 无限级分类
+        // $cateTree = new Catetree();
+        // $categoryResList = $category->getCategoryList();
+        // $categoryList = $cateTree->catetree($categoryResList);
+
+        // nav导航显示5条分类
+        $cateFive = $category->getIndexCateFive();
+
+        $this->cateFive = $cateFive;
+        $this->categoryRes = $categoryRes;
     }
 
 }

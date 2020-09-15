@@ -1,0 +1,435 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>投票</title>
+    <meta name="keywords" content="投票关键词">
+    <meta name="description" content="投票描述">
+    <link rel="stylesheet" type="text/css" href="static/css/base-1600133341.css" media="all">
+    <link rel="stylesheet" href="static/css/header-1600133341.css">
+    <link rel="stylesheet" href="static/css/index-160013334123.css">
+    <script type="text/javascript" src="static/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        var masterDomain = 'https://ihuoniao.cn', channelDomain = 'https://ihuoniao.cn/sz/vote', staticPath = 'https://ihuoniao.cn/static/';
+        var hideFileUrl = 0;
+        var templateSkin = 'https://ihuoniao.cn/templates/vote/skin2/';
+    </script>
+</head>
+
+<body class="w1200">
+<script type="text/javascript">var cookiePre = 'HN_', cfg_clihost = 'ihuoniao.cn', cfg_module = 'vote',cfg_cityInfo = '{"cityid":"166","name":"\u82cf\u5dde","pinyin":"suzhou","url":"https:\/\/ihuoniao.cn\/sz","domain":"sz","type":"2","default":"1","count":72}'; </script>
+
+<!-- 多语言 -->
+<script src="static/js/zh-CN-1600133341.js"></script>
+
+<!-- 顶部信息 s -->
+<div class="topInfo">
+	<div class="wrap fn-clear">
+		<div class="loginbox">
+						<span class="siteCityInfo">苏州</span>
+			<span class="changeCityBtn">
+				「<a href="javascript:;">切换城市</a>」      
+				<div class="changeCityList">
+					<p class="setwidth"></p>
+					<div class="boxpd">
+						<div class="sj"><i></i></div>
+						<div class="box">
+							<div class="content fn-clear">
+								<p class="tit">请选择您所在的城市：</p>      
+								<ul></ul>
+				      		</div>
+				      <div class="morecontent fn-hide">
+								<dl class="hot">
+									<dt>热门</dt>      
+									<dd></dd>
+								</dl>
+								<div class="more">
+									<dl class="pytit">
+										<dt>城市</dt>      
+										<dd></dd>
+									</dl>
+									<div class="list"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</span>
+									<div class="loginbefore fn-clear" id="navLoginAfter">
+				<a href="register.html" class="regist">注册</a>
+				<span class="fn-left">&nbsp;/&nbsp;</span>
+				<span class="logint"><a href="login.html">登录</a></span>
+				
+								<a class="loginconnect" href="show-Login_pc_code_101336457_htt.html" title="QQ快捷登录" target="_blank"><i class="picon"><img src="static/picture/24-1600133341.png"></i></a>
+								
+								<a class="loginconnect" href="index-https2F2Fopenauth.alipay.c.html" title="支付宝快捷登录" target="_blank"><i class="picon"><img src="static/picture/24-16001333411.png"></i></a>
+								
+								<a class="loginconnect" href="login-wechat.html" title="微信快捷登录" target="_blank"><i class="picon"><img src="static/picture/24-16001333412.png"></i></a>
+								
+								
+								
+								
+								
+								
+								
+								
+			</div>
+					</div>
+		<ul class="menu topbarlink fn-clear">
+			<li>
+				<a href="index.html" style="color: #f60;">网站首页</a><span class="separ">|</span>
+			</li>
+			<li class="dropdown user">
+				<a href="login-https2F2Fihuoniao.cn2Fu.html">会员中心<i class="picon picon-down"></i></a>
+				<div class="submenu">
+					<a href="login-https2F2Fihuoniao.cn2Fu2Fo.html" target="_blank">我的订单</a>					<a href="login-https2F2Fihuoniao.cn2Fu2Fr.html" target="_blank">交易明细</a>
+					<a href="login-https2F2Fihuoniao.cn2Fu2Fs.html" target="_blank">安全中心</a>
+				</div>
+			</li>
+			<li><a href="mobile.html" target="_blank"><i class=""><img src="static/picture/public_top_icon_mobile.png"></i>手机站</a><span class="separ">|</span>
+				<div class="pop">
+					<s></s>
+					<p>扫码访问<a href="mobile.html" target="_blank"><img src="static/picture/qrcode-httpsihuoniao.cn.jpg" width="150" height="150"></a></p>
+				</div>
+			</li>
+			<li><a href="javascript:;"><i class=""><img src="static/picture/public_top_icon_wechat.png"></i>微信公众号</a><span class="separ">|</span>
+				<div class="pop" style="left: -26px;">
+					<s></s>
+					<p>扫码关注<img src="static/picture/15687067729028.jpg" width="150" height="150"></p>
+				</div>
+			</li>
+			<li class="dropdown">
+				<a href="javascript:;">快速发布<i class="picon picon-down"></i></a>
+				<div class="submenu">
+					<a href="login-https2F2Fihuoniao.cn2Fu2Ff.html" target="_blank">新闻投稿</a>					<a href="login-https2F2Fihuoniao.cn2Fu2Ff1.html" target="_blank">分类信息</a>					<a href="login-https2F2Fihuoniao.cn2Fu2Fc.html" target="_blank">发布房源</a>					<a href="login-https2F2Fihuoniao.cn2Fsz2F.html" target="_blank">发布活动</a>					<a href="login-https2F2Fihuoniao.cn2Fsz2F1.html" target="_blank">发布新贴</a>					<a href="login-https2F2Fihuoniao.cn2Fu2Ff2.html" target="_blank">发起直播</a>  
+					<a href="login-https2F2Fihuoniao.cn2Fu2Ff3.html" target="_blank">发布投票</a>  
+					<a href="login-https2F2Fihuoniao.cn2Fu2Ff4.html" target="_blank">发布二手车</a>  
+					<a href="login-https2F2Fihuoniao.cn2Fu2Ff5.html" target="_blank">发布顺风车</a>				</div>
+			</li>
+			<li class="dropdown webmap">
+				<a href="javascript:;">网站导航<i class="picon picon-down"></i></a>
+				<div class="submenu">
+					
+					<a href="sfcar.html" style="">顺风车</a>
+					
+					<a href="article.html" style="">信息资讯</a>
+					
+					<a href="info.html" style="">二手信息</a>
+					
+					<a href="house.html" style="">房产门户</a>
+					
+					<a href="job.html" style="">招聘求职</a>
+					
+					<a href="tieba.html" style="">贴吧社区</a>
+					
+					<a href="circle.html" style="">圈子动态</a>
+					
+					<a href="shop.html" style="">在线商城</a>
+					
+					<a href="waimai.html" style="">美食外卖</a>
+					
+					<a href="list1.html" target="_blank" style="">小程序直播</a>
+					
+					<a href="live.html" style="">视频直播</a>
+					
+					<a href="tuan.html" style="">团购秒杀</a>
+					
+					<a href="business.html" target="_blank" style=" font-weight: 700;">火鸟商家</a>
+					
+					<a href="huodong.html" style="">同城活动</a>
+					
+					<a href="pension.html" style="">养老机构</a>
+					
+					<a href="education.html" style="">教育培训</a>
+					
+					<a href="travel.html" style="">旅游频道</a>
+					
+					<a href="marry.html" style="">婚嫁频道</a>
+					
+					<a href="homemaking.html" style="">家政服务</a>
+					
+					<a href="car.html" style="">汽车门户</a>
+					
+					<a href="renovation.html" style="">装修门户</a>
+					
+					<a href="zhuanti.html" style="">拖拽专题</a>
+					
+					<a href="dating.html" style="">互动交友</a>
+					
+					<a href="paper.html" style="">电子报刊</a>
+					
+					<a href="jianzhan.html" style="">自助建站</a>
+					
+					<a href="huangye.html" style="">便民黄页</a>
+					
+					<a href="" style="">投票活动</a>
+					
+					<a href="jifen.html" style="">积分商城</a>
+					
+					<a href="quanjing.html" style="">VR全景</a>
+					
+					<a href="video.html" style="">视频频道</a>
+					
+					<a href="image.html" style="">图说资讯</a>
+					
+					<a href="javascript:;" target="_blank" style=" color: #00b0f0; font-weight: 700;">酷曼官网</a>
+					
+					<a href="login1.html" target="_blank" style="">休闲游戏</a>
+					
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- 顶部信息 e -->
+<script type="text/template" id="notLoginHtml">
+	<div class="loginbefore fn-clear" id="navLoginAfter">
+		<a href="https://ihuoniao.cn/register.html" class="regist">注册</a>
+		<span class="fn-left">&nbsp;/&nbsp;</span>
+		<span class="logint"><a href="https://ihuoniao.cn/login.html">登录</a></span>
+		
+				<a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=qq" title="QQ快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/qq/img/24.png" /></i></a>
+				
+				<a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=alipay" title="支付宝快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/alipay/img/24.png" /></i></a>
+				
+				<a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=wechat" title="微信快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/wechat/img/24.png" /></i></a>
+				
+				
+				
+				
+				
+				
+				
+				
+	</div>
+</script>
+
+<div class="header wrap fn-clear">
+    <div class="logo"><a href="" title="投票频道"><img src="static/picture/15694625878540.png" alt="投票频道"></a></div>
+    <div class="kefu">
+        <s><img src="static/picture/toupiao_tel.png"></s>
+        <p>客服热线</p>
+        <em>0512-67581578</em>
+    </div>
+    <div class="app-con fn-clear">
+        <div class="icon-box app">
+            <a href="mobile.html" target="_blank"><img src="static/picture/app.png"></a>
+            <p><a href="mobile.html" target="_blank">移动端</a></p>
+            <div class="down app-down fn-clear">
+                <div class="con-box">
+                    <img src="static/picture/qrcode-httpsihuoniao.cn.jpg">
+                    <p>扫码访问</p>
+                </div>
+                <div class="con-box">
+                    <img src="static/picture/qrcode-httpsihuoniao.cn.jpg">
+                    <p>扫码访问</p>
+                </div>
+            </div>
+        </div>
+        <div class="icon-box wx">
+            <img src="static/picture/weixin.png">
+            <p>微信端</p>
+            <div class="down wx-down fn-clear">
+                <div class="con-box">
+                    <img src="static/picture/15687067729028.jpg">
+                    <p>扫码访问</p>
+                </div>
+                <div class="con-box">
+                    <img src="static/picture/15687067729028.jpg">
+                    <p>微信公众平台：<br>火鸟门户</p>
+                </div>
+                <div class="con-box">
+                    <img src="static/picture/15903945052582.png">
+                    <p>微信小程序：<br>火鸟门户</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="searchbox">
+        <form id="myform" action="https://ihuoniao.cn/sz/vote/search.html">
+            <input type="text" class="searchkey" name="keywords" placeholder="请输入你要搜索的关键词" value="">
+            <i class="isearch"></i>
+        </form>
+    </div>
+</div>
+
+    <div class="banner-box">
+        <div class="wrap">
+            <img src="static/picture/banner.png">
+            <div class="banner-btn"><a href="javascript:;">发起投票</a></div>
+        </div>
+    </div>
+
+    <div class="container fn-clear">
+        <div class="mt">
+            <img src="static/picture/mt1.png">
+        </div>
+
+        <div class="panic fn-clear">
+            <ul>
+                
+                <li><a href="javascript:;">
+                    <div class="eg-box"><img src="static/picture/15671662462560.jpg" alt="热点~西安两字就越像“面皮”难怪是美食圣地！"></div>
+                    <p>热点~西安两字就越像“面皮”难怪是美食圣地！</p>
+                    <div class="see"><i class="b"></i><span>41</span><i class="s"></i><span>640</span></div>
+                </a></li>
+                
+                <li><a href="javascript:;">
+                    <div class="eg-box"><img src="static/picture/15649997681391.jpg" alt="龙子湖社区议事厅百铁小区楼门治理方案投票"></div>
+                    <p>龙子湖社区议事厅百铁小区楼门治理方案投票</p>
+                    <div class="see"><i class="b"></i><span>40</span><i class="s"></i><span>860</span></div>
+                </a></li>
+                
+                <li><a href="javascript:;">
+                    <div class="eg-box"><img src="static/picture/15608440516550.jpg" alt="最美学生"></div>
+                    <p>最美学生</p>
+                    <div class="see"><i class="b"></i><span>29</span><i class="s"></i><span>567</span></div>
+                </a></li>
+                
+                <li><a href="javascript:;">
+                    <div class="eg-box"><img src="static/picture/15599133933412.jpeg" alt="哪个地方的枣最好吃"></div>
+                    <p>哪个地方的枣最好吃</p>
+                    <div class="see"><i class="b"></i><span>12</span><i class="s"></i><span>304</span></div>
+                </a></li>
+                
+                <li><a href="javascript:;">
+                    <div class="eg-box"><img src="static/picture/15543405585895.jpg" alt="十佳青年"></div>
+                    <p>十佳青年</p>
+                    <div class="see"><i class="b"></i><span>18</span><i class="s"></i><span>351</span></div>
+                </a></li>
+                
+                <li><a href="javascript:;">
+                    <div class="eg-box"><img src="static/picture/15438032795338.jpg" alt="苏州最受欢迎的旅游景点"></div>
+                    <p>苏州最受欢迎的旅游景点</p>
+                    <div class="see"><i class="b"></i><span>23</span><i class="s"></i><span>503</span></div>
+                </a></li>
+                
+            </ul>
+        </div>
+
+        <div class="loadmore_btn"><a href="javascript:;">加载更多案例</a></div>
+
+    </div>
+
+
+<div class="footer gray">
+  <div class="wrap">
+        <div class="friendlink">
+      <h5>友情链接</h5>      
+      <ul class="fn-clear">
+        
+        <li><a href="javascript:;" target="_blank" title="未来网">未来网</a></li>
+        
+        <li><a href="javascript:;" target="_blank" title="中国文明网">中国文明网</a></li>
+        
+        <li><a href="javascript:;" target="_blank" title="大众投票网">大众投票网</a></li>
+        
+        <li><a href="javascript:;" target="_blank" title="帮我投票网">帮我投票网</a></li>
+        
+        <li><a href="javascript:;" target="_blank" title="中国评选网">中国评选网</a></li>
+        
+      </ul>
+    </div>
+        <div class="help fn-clear">
+      <div class="helplist">
+        <dl>
+          <dt>关于我们</dt>     
+          
+          <dd><a href="about-1.html" target="_blank">网站介绍</a></dd>
+          
+          <dd><a href="about-2.html" target="_blank">关于我们</a></dd>
+          
+          <dd><a href="about-3.html" target="_blank">服务条款</a></dd>
+          
+          <dd><a href="about-4.html" target="_blank">广告服务</a></dd>
+          
+          <dd><a href="feedback.html" target="_blank">意见反馈</a></dd>     
+        </dl>
+        
+        <dl>
+          <dt>常见问题<s></s></dt>
+          
+          <dd><a href="help-2.html" target="_blank" title="账户类">账户类</a></dd>
+          
+          <dd><a href="help-3.html" target="_blank" title="购物类">购物类</a></dd>
+          
+          <dd><a href="help-4.html" target="_blank" title="款项类">款项类</a></dd>
+          
+          <dd><a href="help-5.html" target="_blank" title="配送类">配送类</a></dd>
+          
+        </dl>
+        
+        <dl>
+          <dt>订单百事通<s></s></dt>
+          
+          <dd><a href="help-11.html" target="_blank" title="提交订单">提交订单</a></dd>
+          
+          <dd><a href="help-12.html" target="_blank" title="订单查询">订单查询</a></dd>
+          
+          <dd><a href="help-13.html" target="_blank" title="订单取消">订单取消</a></dd>
+          
+          <dd><a href="help-15.html" target="_blank" title="订单异常">订单异常</a></dd>
+          
+          <dd><a href="help-14.html" target="_blank" title="交易纠纷">交易纠纷</a></dd>
+          
+        </dl>
+        
+        <dl>
+          <dt>购物指南<s></s></dt>
+          
+          <dd><a href="help-16.html" target="_blank" title="交易条款">交易条款</a></dd>
+          
+          <dd><a href="help-17.html" target="_blank" title="促销咨询">促销咨询</a></dd>
+          
+          <dd><a href="help-18.html" target="_blank" title="购物流程">购物流程</a></dd>
+          
+          <dd><a href="help-19.html" target="_blank" title="商品咨询">商品咨询</a></dd>
+          
+        </dl>
+        
+        <dl>
+          <dt>支付及发票<s></s></dt>
+          
+          <dd><a href="help-20.html" target="_blank" title="支付流程">支付流程</a></dd>
+          
+          <dd><a href="help-21.html" target="_blank" title="在线支付">在线支付</a></dd>
+          
+          <dd><a href="help-22.html" target="_blank" title="公司转账">公司转账</a></dd>
+          
+          <dd><a href="help-23.html" target="_blank" title="支票支付">支票支付</a></dd>
+          
+        </dl>
+        
+        <dl>
+          <dt>售后服务<s></s></dt>
+          
+          <dd><a href="help-24.html" target="_blank" title="售后政策（自营）">售后政策（自营）</a></dd>
+          
+          <dd><a href="help-25.html" target="_blank" title="售后政策（卖家）">售后政策（卖家）</a></dd>
+          
+          <dd><a href="help-26.html" target="_blank" title="返修/退换货申请">返修/退换货申请</a></dd>
+          
+          <dd><a href="help-27.html" target="_blank" title="商品返回">商品返回</a></dd>
+          
+          <dd><a href="help-28.html" target="_blank" title="退款说明">退款说明</a></dd>
+          
+        </dl>
+        
+      </div>
+      <div class="qr">
+        <div class="qr-img"><img src="static/picture/qrcode-httpsihuoniao.cn.jpg">移动版</div>     
+        <div class="qr-img"><img src="static/picture/15687067729028.jpg">微信公众号</div>     
+      </div>
+    </div>
+    <div class="copyright"><p style="text-align: center;">本站非实际运营网站，所载全部信息内容均仅作为软件系统功能测试之用，切勿当真！若有侵权，请即时联系：<a href="javascript:;" target="_self" textvalue="0512-67581578">0512-67581578</a><br>版权所有 © 2018 苏州酷曼软件技术有限公司. All rights reserved.&nbsp;</p><p style="text-align: center;"><a href="javascript:;" target="_blank">苏ICP备13047463号</a></p></div>
+    <div class="statisticscode"></div>
+  </div>
+</div>
+
+<script type="text/javascript" src="static/js/common-1600133341.js"></script>
+<script src="static/js/searchbox-1600133341.js"></script>
+<script src="static/js/index-160013334123.js"></script>
+<script src="static/js/header-1600133341.js"></script>
+
+</body>
+</html><script>var cfg_currency = {"name":"\u4eba\u6c11\u5e01","short":"\u5143","symbol":"\u00a5","code":"RMB","rate":"1"};</script><!-- Processed in page load 0.100978 second(s), 146 queries ,0.013192 second(s) -->

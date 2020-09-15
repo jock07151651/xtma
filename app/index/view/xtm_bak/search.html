@@ -1,0 +1,152 @@
+
+<!DOCTYPE html PUBliC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>广州 - 信息搜索 - 分类信息网-蚂蚁分类信息系统</title>
+<meta name="keywords" content="广州" />
+<link rel="stylesheet" href="http://demo9.mayicms.com/template/search/css/search.css" />
+<link rel="stylesheet" href="http://demo9.mayicms.com/template/search/css/search_style.css" />
+<link rel="stylesheet" href="http://demo9.mayicms.com/template/default/css/pagination2.css" />
+<script language="javascript">var current_domain='http://demo9.mayicms.com';</script>
+<script language="JavaScript" src="http://demo9.mayicms.com/template/default/js/global.js"></script>
+<script language="JavaScript" src="http://demo9.mayicms.com/template/default/js/jquery.min.js"></script>
+</head>
+<body class="red full bodybgred1">
+<div class="main_current">
+<div class="s_home cc">
+<div class="new_topbar_wrap">
+  <div class="new_topbar">
+    <div class="cc">
+      <ul class="new_topbar_right" style=" float:left;">
+        <li class="noborder"><a href="http://demo9.mayicms.com">首页</a></li>
+        <li><a href="http://demo9.mayicms.com/mayi-post.php" rel="nofollow">快速发布信息</a></li>
+        <li><a href="http://demo9.mayicms.com/delinfo.php" rel="nofollow">修改删除信息</a></li>
+      </ul>
+      <span class="fr" style="padding-top:7px;"> </span> <span class="new_topbar_left fr"><a href="http://demo9.mayicms.com/member/index.php">用户中心</a></span> </div>
+  </div>
+</div>
+<div class="cc"></div><div class="s_logo">
+    <div class="logo"><a href="http://demo9.mayicms.com"><img src="/logo.gif" alt="分类信息网-蚂蚁分类信息系统"></a></div>
+    <div class="s_info">
+    <form action="search.php?" method="get" />
+        <div class="s_ulA" id="searchType">
+            <ul>
+                <li name="s8" id="s8_information" onclick="show_tab('information');" class="current"><a href="#">信息</a></li>
+<li name="s8" id="s8_store" onclick="show_tab('store');" ><a href="#">商家</a></li>                <li name="s8" id="s8_group" onclick="show_tab('group');" ><a href="#">团购</a></li>
+                <li name="s8" id="s8_news" onclick="show_tab('news');" ><a href="#">热点资讯</a></li>
+                <li name="s8" id="s8_goods" onclick="show_tab('goods');" ><a href="#">商品</a></li>
+            </ul>
+        </div>
+        <div class="s_enter cc">
+        	<input type="hidden" id="searchtype" name="mod" value="information"/>
+            <input type="hidden" name="catid" value="">
+            <input type="hidden" name="areaid" value="">
+            <input placeholder="请输入关键词搜索" value="广州" class="s_input" type="text" name="keywords" >
+            <button class="s_btn" type="submit">搜 索</button>
+        </div>
+        </form>
+    </div>
+</div>
+<div class="cc"></div><script language="javascript">
+document.domain = '';
+</script>
+<!-- 搜索结果页 -->
+<div class="c"></div>
+ 	<div class="main2 cc" id="mainbox">
+    	<div class="h">
+        	<span class="fr">搜索<span class="s1">广州</span>获得0条查询结果
+        	</span>
+            <span class="mr20"><a href="http://demo9.mayicms.com/search.php">分类信息网-蚂蚁分类信息系统搜索</a> &raquo; 信息</span><span class="s6">小提示：多个词用空格分隔，搜索的更准！</span>
+        </div>
+
+<div class="content fl">
+        	<div class="s_dlA">
+                <div class="searchpagelist">
+                <ul>
+                                <div class="nodata">抱歉！没有找到匹配的相关信息，您可以尝试换个关键词搜索一下。</div>
+                                </ul>
+                </div>
+                <div class="pagination2 mt6"><span class=anum>共0记录</span> </div>
+            </div>
+        </div>
+        <div class="sidebar fr">
+        	<div class="p15 s_boxA">
+            	<h2>信息详细检索</h2>
+                <ul class="quicksearch">
+<div style="display:none;">
+                        <iframe width=0 height=0 src='' id="iframe_area" name="iframe_area"></iframe> 
+                        <iframe width=0 height=0 src='' id="iframe_street" name="iframe_street"></iframe> 
+                        <form method="post" target="iframe_area" id="form_area"></form>
+                    </div>
+                    <form action="search.php?" method="get" />
+                    <dl>
+                    <dt>选择类别：</dt>
+                    <dd>
+                    <select name="catid">
+                        <option value="" style="background-color:#6eb00c; color:white!important;">不限类别</option>
+                                                <option value="3" >房屋租售</option>
+                                                <option value="1" >二手转让</option>
+                                                <option value="2" >车辆买卖</option>
+                                                <option value="4" >全职招聘</option>
+                                                <option value="5" >兼职招聘</option>
+                                                <option value="6" >求职简历</option>
+                                                <option value="7" >交友活动</option>
+                                                <option value="8" >宠物</option>
+                                                <option value="9" >生活服务</option>
+                                                <option value="10" >教育培训</option>
+                                                <option value="244" >商务服务</option>
+                                            </select>
+</dd>
+                    <dt>所在地区：</dt>
+                    <dd><select id='cityid' name='cityid'  onChange="choose_where('getarea',this.options[this.selectedIndex].value,'','1')"  class="input" style="width:140px!important" require="true" datatype="limit" msgid="地区" msg="请选择所在地区"><option value=''  selected >请选择所在分站</option><option value="45"  >a.安庆</option><option value="95"  >a.安顺</option><option value="122"  >a.安阳</option><option value="207"  >a.鞍山</option><option value="230"  >a.阿拉善</option><option value="279"  >a.安康</option><option value="299"  >a.阿坝</option><option value="307"  >a.阿里</option><option value="314"  >a.阿克苏</option><option value="321"  >a.阿勒泰</option><option value="1"  >b.北京</option><option value="40"  >b.蚌埠</option><option value="51"  >b.亳州</option><option value="67"  >b.白银</option><option value="84"  >b.北海</option><option value="87"  >b.百色</option><option value="99"  >b.毕节</option><option value="108"  >b.保定</option><option value="177"  >b.白山</option><option value="179"  >b.白城</option><option value="209"  >b.本溪</option><option value="220"  >b.包头</option><option value="226"  >b.巴彦淖尔</option><option value="258"  >b.滨州</option><option value="273"  >b.宝鸡</option><option value="294"  >b.巴中</option><option value="316"  >b.巴音郭楞</option><option value="318"  >b.博尔塔拉</option><option value="326"  >b.保山</option><option value="4"  >c.重庆</option><option value="23"  >c.潮州</option><option value="47"  >c.滁州</option><option value="49"  >c.巢湖</option><option value="52"  >c.池州</option><option value="86"  >c.崇左</option><option value="104"  >c.沧州</option><option value="110"  >c.承德</option><option value="158"  >c.长沙</option><option value="164"  >c.常德</option><option value="167"  >c.郴州</option><option value="172"  >c.长春</option><option value="184"  >c.常州</option><option value="217"  >c.朝阳</option><option value="222"  >c.赤峰</option><option value="263"  >c.长治</option><option value="281"  >c.成都</option><option value="303"  >c.昌都</option><option value="317"  >c.昌吉</option><option value="333"  >c.楚雄</option><option value="21"  >d.东莞</option><option value="74"  >d.定西</option><option value="137"  >d.大庆</option><option value="144"  >d.大兴安岭</option><option value="206"  >d.大连</option><option value="210"  >d.丹东</option><option value="247"  >d.东营</option><option value="256"  >d.德州</option><option value="261"  >d.大同</option><option value="284"  >d.德阳</option><option value="295"  >d.达州</option><option value="334"  >d.大理</option><option value="335"  >d.德宏</option><option value="337"  >d.迪庆</option><option value="153"  >e.鄂州</option><option value="157"  >e.恩施</option><option value="224"  >e.鄂尔多斯</option><option value="10"  >f.佛山</option><option value="48"  >f.阜阳</option><option value="55"  >f.福州</option><option value="85"  >f.防城港</option><option value="204"  >f.抚州</option><option value="208"  >f.抚顺</option><option value="213"  >f.阜新</option><option value="5"  >g.广州</option><option value="77"  >g.甘南</option><option value="80"  >g.桂林</option><option value="82"  >g.贵港</option><option value="92"  >g.贵阳</option><option value="200"  >g.赣州</option><option value="234"  >g.固原</option><option value="240"  >g.果洛</option><option value="286"  >g.广安</option><option value="291"  >g.广元</option><option value="300"  >g.甘孜</option><option value="15"  >h.惠州</option><option value="18"  >h.河源</option><option value="26"  >h.杭州</option><option value="29"  >h.湖州</option><option value="38"  >h.合肥</option><option value="41"  >h.淮南</option><option value="43"  >h.淮北</option><option value="46"  >h.黄山</option><option value="88"  >h.河池</option><option value="90"  >h.贺州</option><option value="101"  >h.海口</option><option value="106"  >h.邯郸</option><option value="113"  >h.衡水</option><option value="120"  >h.鹤壁</option><option value="132"  >h.哈尔滨</option><option value="135"  >h.鹤岗</option><option value="142"  >h.黑河</option><option value="147"  >h.黄石</option><option value="154"  >h.黄冈</option><option value="161"  >h.衡阳</option><option value="169"  >h.怀化</option><option value="188"  >h.淮安</option><option value="218"  >h.葫芦岛</option><option value="219"  >h.呼和浩特</option><option value="221"  >h.呼伦贝尔</option><option value="237"  >h.海东</option><option value="238"  >h.海北</option><option value="239"  >h.黄南</option><option value="242"  >h.海西</option><option value="259"  >h.菏泽</option><option value="277"  >h.汉中</option><option value="312"  >h.哈密</option><option value="313"  >h.和田</option><option value="331"  >h.红河</option><option value="11"  >j.江门</option><option value="24"  >j.揭阳</option><option value="27"  >j.嘉兴</option><option value="31"  >j.金华</option><option value="65"  >j.嘉峪关</option><option value="66"  >j.金昌</option><option value="72"  >j.酒泉</option><option value="116"  >j.焦作</option><option value="134"  >j.鸡西</option><option value="139"  >j.佳木斯</option><option value="151"  >j.荆州</option><option value="156"  >j.荆门</option><option value="173"  >j.吉林</option><option value="195"  >j.景德镇</option><option value="197"  >j.九江</option><option value="201"  >j.吉安</option><option value="211"  >j.锦州</option><option value="243"  >j.济南</option><option value="244"  >j.济宁</option><option value="264"  >j.晋城</option><option value="266"  >j.晋中</option><option value="131"  >k.开封</option><option value="310"  >k.克拉玛依</option><option value="315"  >k.喀什</option><option value="323"  >k.昆明</option><option value="35"  >l.丽水</option><option value="50"  >l.六安</option><option value="62"  >l.龙岩</option><option value="64"  >l.兰州</option><option value="75"  >l.陇南</option><option value="76"  >l.临夏</option><option value="79"  >l.柳州</option><option value="89"  >l.来宾</option><option value="93"  >l.六盘水</option><option value="112"  >l.廊坊</option><option value="117"  >l.洛阳</option><option value="125"  >l.漯河</option><option value="170"  >l.娄底</option><option value="175"  >l.辽源</option><option value="187"  >l.连云港</option><option value="214"  >l.辽阳</option><option value="254"  >l.莱芜</option><option value="255"  >l.临沂</option><option value="257"  >l.聊城</option><option value="269"  >l.临汾</option><option value="270"  >l.吕梁</option><option value="282"  >l.泸州</option><option value="289"  >l.乐山</option><option value="301"  >l.凉山</option><option value="302"  >l.拉萨</option><option value="308"  >l.林芝</option><option value="328"  >l.丽江</option><option value="329"  >l.临沧</option><option value="13"  >m.茂名</option><option value="16"  >m.梅州</option><option value="42"  >m.马鞍山</option><option value="141"  >m.牡丹江</option><option value="283"  >m.绵阳</option><option value="297"  >m.眉山</option><option value="28"  >n.宁波</option><option value="61"  >n.南平</option><option value="63"  >n.宁德</option><option value="78"  >n.南宁</option><option value="127"  >n.南阳</option><option value="181"  >n.南京</option><option value="186"  >n.南通</option><option value="194"  >n.南昌</option><option value="285"  >n.南充</option><option value="288"  >n.内江</option><option value="306"  >n.那曲</option><option value="336"  >n.怒江</option><option value="57"  >p.莆田</option><option value="71"  >p.平凉</option><option value="123"  >p.濮阳</option><option value="129"  >p.平顶山</option><option value="196"  >p.萍乡</option><option value="215"  >p.盘锦</option><option value="293"  >p.攀枝花</option><option value="20"  >q.清远</option><option value="32"  >q.衢州</option><option value="59"  >q.泉州</option><option value="73"  >q.庆阳</option><option value="83"  >q.钦州</option><option value="96"  >q.黔南</option><option value="97"  >q.黔东南</option><option value="98"  >q.黔西南</option><option value="105"  >q.迁安</option><option value="114"  >q.秦皇岛</option><option value="133"  >q.齐齐哈尔</option><option value="140"  >q.七台河</option><option value="251"  >q.青岛</option><option value="324"  >q.曲靖</option><option value="253"  >r.日照</option><option value="305"  >r.日喀则</option><option value="2"  >s.上海</option><option value="6"  >s.深圳</option><option value="8"  >s.汕头</option><option value="9"  >s.韶关</option><option value="17"  >s.汕尾</option><option value="30"  >s.绍兴</option><option value="54"  >s.宿州</option><option value="58"  >s.三明</option><option value="102"  >s.三亚</option><option value="103"  >s.石家庄</option><option value="126"  >s.三门峡</option><option value="128"  >s.商丘</option><option value="136"  >s.双鸭山</option><option value="143"  >s.绥化</option><option value="148"  >s.十堰</option><option value="149"  >s.随州</option><option value="162"  >s.邵阳</option><option value="174"  >s.四平</option><option value="178"  >s.松原</option><option value="190"  >s.苏州</option><option value="192"  >s.宿迁</option><option value="202"  >s.上饶</option><option value="205"  >s.沈阳</option><option value="232"  >s.石嘴山</option><option value="265"  >s.朔州</option><option value="280"  >s.商洛</option><option value="287"  >s.遂宁</option><option value="304"  >s.山南</option><option value="322"  >s.石河子</option><option value="3"  >t.天津</option><option value="34"  >t.台州</option><option value="44"  >t.铜陵</option><option value="68"  >t.天水</option><option value="100"  >t.铜仁</option><option value="111"  >t.唐山</option><option value="176"  >t.通化</option><option value="193"  >t.泰州</option><option value="216"  >t.铁岭</option><option value="223"  >t.通辽</option><option value="252"  >t.泰安</option><option value="260"  >t.太原</option><option value="272"  >t.铜川</option><option value="311"  >t.吐鲁番</option><option value="320"  >t.塔城</option><option value="37"  >w.温州</option><option value="39"  >w.芜湖</option><option value="69"  >w.武威</option><option value="81"  >w.梧州</option><option value="145"  >w.武汉</option><option value="182"  >w.无锡</option><option value="225"  >w.乌海</option><option value="227"  >w.乌兰察布</option><option value="233"  >w.吴忠</option><option value="249"  >w.潍坊</option><option value="250"  >w.威海</option><option value="275"  >w.渭南</option><option value="309"  >w.乌鲁木齐</option><option value="330"  >w.文山</option><option value="53"  >x.宣城</option><option value="56"  >x.厦门</option><option value="107"  >x.邢台</option><option value="118"  >x.信阳</option><option value="121"  >x.新乡</option><option value="124"  >x.许昌</option><option value="146"  >x.襄樊</option><option value="152"  >x.咸宁</option><option value="155"  >x.孝感</option><option value="160"  >x.湘潭</option><option value="171"  >x.湘西</option><option value="183"  >x.徐州</option><option value="198"  >x.新余</option><option value="228"  >x.兴安盟</option><option value="229"  >x.锡林郭勒</option><option value="236"  >x.西宁</option><option value="268"  >x.忻州</option><option value="271"  >x.西安</option><option value="274"  >x.咸阳</option><option value="332"  >x.西双版纳</option><option value="19"  >y.阳江</option><option value="25"  >y.云浮</option><option value="36"  >y.义乌</option><option value="91"  >y.玉林</option><option value="138"  >y.伊春</option><option value="150"  >y.宜昌</option><option value="163"  >y.岳阳</option><option value="166"  >y.益阳</option><option value="168"  >y.永州</option><option value="180"  >y.延边</option><option value="185"  >y.扬州</option><option value="189"  >y.盐城</option><option value="199"  >y.鹰潭</option><option value="203"  >y.宜春</option><option value="212"  >y.营口</option><option value="231"  >y.银川</option><option value="241"  >y.玉树</option><option value="248"  >y.烟台</option><option value="262"  >y.阳泉</option><option value="267"  >y.运城</option><option value="276"  >y.延安</option><option value="278"  >y.榆林</option><option value="292"  >y.宜宾</option><option value="298"  >y.雅安</option><option value="319"  >y.伊犁</option><option value="325"  >y.玉溪</option><option value="7"  >z.珠海</option><option value="12"  >z.湛江</option><option value="14"  >z.肇庆</option><option value="22"  >z.中山</option><option value="33"  >z.舟山</option><option value="60"  >z.漳州</option><option value="70"  >z.张掖</option><option value="94"  >z.遵义</option><option value="109"  >z.张家口</option><option value="115"  >z.郑州</option><option value="119"  >z.驻马店</option><option value="130"  >z.周口</option><option value="159"  >z.株洲</option><option value="165"  >z.张家界</option><option value="191"  >z.镇江</option><option value="235"  >z.中卫</option><option value="245"  >z.淄博</option><option value="246"  >z.枣庄</option><option value="290"  >z.自贡</option><option value="296"  >z.资阳</option><option value="327"  >z.昭通</option></select><span id="showarea"></span>&nbsp;<span id="showstreet"></span><SCRIPT LANGUAGE="JavaScript">
+<!--
+function choose_where(t,parentid,currentid,delstreet){
+
+	if(t=='getarea'){
+		url='/include/selectwhere.php?action=getarea&parentid='+parentid+'&currentid='+currentid+'&delstreet='+delstreet;
+		target='iframe_area';
+	}else{
+		url='/include/selectwhere.php?action=getstreet&parentid='+parentid+'&currentid='+currentid;
+		target='iframe_street';
+	}
+	document.getElementById('form_area').action=url;
+	document.getElementById('form_area').target=target;
+	document.getElementById('form_area').submit();
+	}
+	
+//-->
+</SCRIPT>
+	</dd>
+                    <dt>发布时间：</dt>
+                    <dd><select name='posttime' id='posttime'><option value='0' selected>不限</option>
+<option value='3'>3天内</option>
+<option value='7'>一周内</option>
+<option value='30'>一个月以内</option>
+<option value='90'>三个月以内</option>
+</select>
+</dd>
+                                        <dt>联系电话：</dt>
+                    <dd><input type="text" name="tel"  class="searchinput inputbox" value="" /></dd>
+<dt>关键字：</dt>
+                    <dd><input type="text" name="keywords"  class="searchinput inputbox" value="广州" /></dd>
+                    <dt>&nbsp;</dt>
+                    <dd><input type="submit" class="submit" value="我要搜索"/></dd>
+                    </dl>
+                    </form>
+                </ul>
+            </div>
+        </div>
+
+        <div class="c">&nbsp;</div>
+  
+    </div>  
+
+</div></div>
+
+<div class="footer-wrap">
+<div class="c mt10"></div>
+<div id="footer"><div id="copyright"><span><font id="fonts">Powered by <a href="https://www.mayicms.com">MayiCMS</a> <a href="http://www.mymps.com.cn">5.9SE GBK</a></font> Processed in 0.033791 second(s) , 2 queries</span> </div></div><script type="text/javascript">loadDefault(['search','show_tab']);</script></div>
+</div>
+</body>
+</html>

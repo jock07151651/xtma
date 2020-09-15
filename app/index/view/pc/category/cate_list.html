@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<!--head样式-->
+{include file="pc/public/head_list" /}
+<!--head样式-->
+<style>
+    .active span {
+        background: #FB5845;
+        display: inline-block;
+    }
+</style>
+
+<body class="w1200">
+<script type="text/javascript">var cookiePre = 'HN_', cfg_clihost = 'ihuoniao.cn', cfg_module = 'info',cfg_cityInfo = '{"cityid":"166","name":"\u82cf\u5dde","pinyin":"suzhou","url":"https:\/\/ihuoniao.cn\/sz","domain":"sz","type":"2","default":"1","count":72}'; </script>
+
+<!-- 多语言 -->
+<script src="__INDEX__/js/zh-CN-1600133341.js"></script>
+
+<!-- 顶部信息 s -->
+{include file="pc/public/top" /}
+<!-- 顶部信息 e -->
+<script type="text/template" id="notLoginHtml">
+    <div class="loginbefore fn-clear" id="navLoginAfter">
+        <a href="https://ihuoniao.cn/register.html" class="regist">注册</a>
+        <span class="fn-left">&nbsp;/&nbsp;</span>
+        <span class="logint"><a href="https://ihuoniao.cn/login.html">登录</a></span>
+
+        <a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=qq" title="QQ快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/qq/img/24.png" /></i></a>
+
+        <a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=alipay" title="支付宝快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/alipay/img/24.png" /></i></a>
+
+        <a class="loginconnect" href="https://ihuoniao.cn/api/login.php?type=wechat" title="微信快捷登录" target="_blank"><i class="picon"><img src="https://ihuoniao.cn/api/login/wechat/img/24.png" /></i></a>
+    </div>
+</script>
+
+<!-- 导航 s-->
+{include file="pc/public/nav_list" /}
+<!-- 导航 e-->
+<div class="main_wrap">
+    <div class="wrap crumbs fn-clear">
+        <div class="cont">
+            <span>您的位置：</span>
+            <a href="/">信息频道</a>
+            <s></s>信息列表</div>
+    </div>
+
+
+    <div class="filter_box wrap">
+
+        <div class="filter">
+            <dl class="fn-clear" id="fnav">
+                <dt>分类</dt>
+                <dd>
+                    <div class="item_box chooseClass">
+                        <a href="{:url('Category/cate_list')}" class="curr">不限</a>
+                    {volist name="categoryRes" id="list"}
+                        <a href="{:url('Category/cate_list',array('listID'=>$list.catid))}">{$list.catname}</a>
+                    {/volist}
+                    </div>
+                </dd>
+            </dl>
+            <dl class="fn-clear" id="addr">
+                <dt>区域</dt>
+                <dd class="chooseClass">
+                    <a href="javascript:;" class="curr">不限</a>
+
+                    <a href="javascript:;">吴中<s></s></a>
+
+                    <a href="javascript:;">虎丘<s></s></a>
+
+                    <a href="javascript:;">工业园区<s></s></a>
+
+                    <a href="javascript:;">相城<s></s></a>
+
+                    <a href="javascript:;">沧浪<s></s></a>
+
+                    <a href="javascript:;">昆山<s></s></a>
+
+                    <a href="javascript:;">张家港<s></s></a>
+
+                    <a href="javascript:;">平江<s></s></a>
+
+                    <a href="javascript:;">常熟<s></s></a>
+
+                    <a href="javascript:;">太仓<s></s></a>
+
+                    <a href="javascript:;">吴江<s></s></a>
+
+                    <a href="javascript:;">金阊<s></s></a>
+
+                    <a href="javascript:;">高新<s></s></a>
+
+                    <a href="javascript:;">甪直镇</a>
+
+                    <a href="javascript:;">花桥</a>
+
+                    <a href="javascript:;">姑苏区</a>
+
+                    <a href="javascript:;">高新区</a>
+
+
+                </dd>
+            </dl>
+            <dl class="fn-clear">
+                <dt>价格</dt>
+                <dd class="chooseClass" data-chose="price" id="priceChoose">
+                    <a href="javascript:;" class="curr">不限</a>
+                    <a href="javascript:;">100元以下</a>
+                    <a href="javascript:;">100-300元</a>
+                    <a href="javascript:;">300-500元</a>
+                    <a href="javascript:;">500-1000元</a>
+                    <a href="javascript:;">1000-1500元</a>
+                    <a href="javascript:;">1500-2000元</a>
+                    <a href="javascript:;">2000-3000元</a>
+                    <a href="javascript:;">3000元以上</a>
+
+                    <div class="inpbox inp_price">
+                        <input type="input" class="p1" id="priceLow" maxlength="6" value="" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"><em>-</em>
+                        <input type="input" class="p2" id="priceTop" maxlength="6" value="" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"> <em>元</em>
+                        <button class="btn btn_price" id="price_sure" data-url="https://ihuoniao.cn/sz/info/list.html?typeid=0&addrid=0&price_section=min,max&item=&keywords=">确定</button>
+                    </div>
+
+                </dd>
+            </dl>
+
+
+        </div>
+
+        <div class="deletebox">
+            <dl class="fi-state fn-clear">
+                <dt>已选</dt>
+                <dd class="fn-clear">
+                </dd>
+                <a class="btn_clear" href="">重置条件</a>
+            </dl>
+        </div>
+
+    </div>
+
+    <!-- 列表 -->
+    <div class="wrap news_wrap fn-clear">
+
+        <div class="new_content">
+            <div class="sort_wrap ">
+                <div class="sortbar fn-clear">
+                    <div class="tabs">
+                        <ul class="fn-clear">
+                            <li class="curr"><a href="javascript:;">全部信息</a></li>
+                            <li><a href="javascript:;">火急</a></li>
+                            <li><a href="javascript:;">推荐</a></li>
+                        </ul>
+                    </div>
+                    <div class="person">
+                        <a href="javascript:;" class="personal">个人</a>
+                        <a href="javascript:;" class="business">商家</a>
+                    </div>
+                </div>
+                <div class="sort">
+                    <ul class="fn-clear">
+                        <li class="st curr"><a href="javascript:;">默认排序</a></li>
+                        <li class="st"><a href="javascript:;">价格最低</a></li>
+                        <li class="st"><a href="javascript:;">最新发布</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="list_ul">
+                {volist name="cateInfoList" id="list"}
+                <li class="fn-clear ">
+                    <div class="left_b">
+                        <a href="{:url('Information/detail',array('iID'=>$list.id))}">
+                            <img src="__INDEX__/picture/15139355515533.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="mid_b">
+                        <h2 class="new_title">
+                            <a href="{:url('Information/detail',array('iID'=>$list.id))}" target="_blank">{$list.title}</a><i class="self"></i>
+                        </h2>
+                        <div class="new_info fn-clear">
+                            <span class="new_icon">
+                                <a href="{:url('Category/cate_list',array('listID'=>$list.catid))}" target="_blank">{$list.catname}</a>
+                            </span>
+                        </div>
+                        <div class="new_phone">
+                            <i></i>
+                            <span class="phoneNum">
+                                {if condition="$Think.session.username neq ''"}{$list.tel}{else}138****125{/if}
+                            </span><span class="see_phone">
+                            <a href="login.html">查看完整电话</a></span>
+                        </div>
+                    </div>
+                    <div class="right_b">
+                        <p class="new_price"><em> ¥ </em><strong>{$list.price}</strong><em>.00</em></p>
+                        <p class="news_time">发布于 <span>{$list.begintime|date="Y-m-d"}</span> </p>
+                    </div>
+
+                </li>
+                {/volist}
+                <!--过期时的li-->
+            </ul>
+
+            <div class="pagination">
+                <div class="inner">
+                    {$cateInfoList|raw}
+                    <div class="page_info">共72条</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="news_r">
+            <div class="adv"><div class="siteAdvObj"><a href="javascript:;" style="cursor:default;"><img src="__INDEX__/picture/15639385871139.png" width="100%" height="" alt=""></a><div class="advMark pos3">广告</div></div></div>
+            <div class="newr_content">
+                <h2 class="newr_tit">优质商家</h2>
+                <ul>
+
+                    <li>
+                        <div class="r_top fn-clear">
+                            <div class="r_left"><a href="business-21.html" target="_blank"><img src="__INDEX__/picture/1598331830277.png" alt="广州加氏迈通信设备有限公司"></a></div>
+                            <div class="r_right"><h3><a href="business-21.html" title="广州加氏迈通信设备有限公司" target="_blank">广州加氏迈通信设备有限公司</a></h3><p>工业园区/胜浦镇</p></div>
+                        </div>
+                        <div class="newr_info">
+                            <span class="red">#美容保健#</span>asdfasd</div>
+                    </li>
+
+                    <li>
+                        <div class="r_top fn-clear">
+                            <div class="r_left"><a href="business-20.html" target="_blank"><img src="__INDEX__/picture/15138404848651.jpg" alt="广汉市周公食品有限公司"></a></div>
+                            <div class="r_right"><h3><a href="business-20.html" title="广汉市周公食品有限公司" target="_blank">广汉市周公食品有限公司</a></h3><p>苏州/高新</p></div>
+                        </div>
+                        <div class="newr_info">
+                            <span class="red">#服装#</span>一进金冠面包房店门，扑面而来的就是各种蛋糕的香味，店内装修也以甜美的风格为主，令人倍感温馨。透明的橱窗内琳琅满目地放置着各色各样的甜点，热爱甜点的MM们可以尽情</div>
+                    </li>
+
+                    <li>
+                        <div class="r_top fn-clear">
+                            <div class="r_left"><a href="business-18.html" target="_blank"><img src="__INDEX__/picture/15138407497719.jpg" alt="深圳市红龙食品有限公司"></a></div>
+                            <div class="r_right"><h3><a href="business-18.html" title="深圳市红龙食品有限公司" target="_blank">深圳市红龙食品有限公司</a></h3><p>苏州/昆山</p></div>
+                        </div>
+                        <div class="newr_info">
+                            <span class="red">#服装配饰#</span>一进金冠面包房店门，扑面而来的就是各种蛋糕的香味，店内装修也以甜美的风格为主，令人倍感温馨。透明的橱窗内琳琅满目地放置着各色各样的甜点，热爱甜点的MM们可以尽情</div>
+                    </li>
+
+                    <li>
+                        <div class="r_top fn-clear">
+                            <div class="r_left"><a href="business-17.html" target="_blank"><img src="__INDEX__/picture/15138416627350.jpg" alt="汕头市澄海区金筷子食品有限公司"></a></div>
+                            <div class="r_right"><h3><a href="business-17.html" title="汕头市澄海区金筷子食品有限公司" target="_blank">汕头市澄海区金筷子食品有限公司</a></h3><p>苏州/常熟</p></div>
+                        </div>
+                        <div class="newr_info">
+                            <span class="red">#婴幼用品#</span>一进金冠面包房店门，扑面而来的就是各种蛋糕的香味，店内装修也以甜美的风格为主，令人倍感温馨。透明的橱窗内琳琅满目地放置着各色各样的甜点，热爱甜点的MM们可以尽情</div>
+                    </li>
+
+                    <li>
+                        <div class="r_top fn-clear">
+                            <div class="r_left"><a href="business-14.html" target="_blank"><img src="__INDEX__/picture/15138425258882.jpg" alt="内蒙古五洲四海电子商务有限公司"></a></div>
+                            <div class="r_right"><h3><a href="business-14.html" title="内蒙古五洲四海电子商务有限公司" target="_blank">内蒙古五洲四海电子商务有限公司</a></h3><p>苏州/相城</p></div>
+                        </div>
+                        <div class="newr_info">
+                            <span class="red">#电视机#</span>一进金冠面包房店门，扑面而来的就是各种蛋糕的香味，店内装修也以甜美的风格为主，令人倍感温馨。透明的橱窗内琳琅满目地放置着各色各样的甜点，热爱甜点的MM们可以尽情</div>
+                    </li>
+
+                    <li>
+                        <div class="r_top fn-clear">
+                            <div class="r_left"><a href="business-16.html" target="_blank"><img src="__INDEX__/picture/15138417882013.jpg" alt="江门阿具食品有限公司"></a></div>
+                            <div class="r_right"><h3><a href="business-16.html" title="江门阿具食品有限公司" target="_blank">江门阿具食品有限公司</a></h3><p>苏州/张家港</p></div>
+                        </div>
+                        <div class="newr_info">
+                            <span class="red">#母婴用品#</span>一进金冠面包房店门，扑面而来的就是各种蛋糕的香味，店内装修也以甜美的风格为主，令人倍感温馨。透明的橱窗内琳琅满目地放置着各色各样的甜点，热爱甜点的MM们可以尽情</div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!--底部-->
+{include file="pc/public/footer" /}
+<!--底部-->
+
+<div class="btntop">
+    <a href="javascript:;" class="top" title="返回顶部"><img src="__INDEX__/picture/gotop.png" alt=""></a>
+</div>
+
+<script type="text/javascript" src="__INDEX__/js/common-1600133341.js"></script>
+
+<script type="text/javascript" src="__INDEX__/js/public-1600133341.js"></script>
+<script type="text/javascript" src="__INDEX__/js/list-1600133341.js"></script>
+</body>
+</html>
+<script>var cfg_currency = {"name":"\u4eba\u6c11\u5e01","short":"\u5143","symbol":"\u00a5","code":"RMB","rate":"1"};</script><!-- Processed in page load 0.177669 second(s), 522 queries ,0.041959 second(s) -->

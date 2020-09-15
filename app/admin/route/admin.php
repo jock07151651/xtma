@@ -24,3 +24,4 @@ Route::rule('sys_set','Config/sys_set','get|post');
 Route::rule('user_list','Member/user_list','get|post');
 Route::rule('user_add','Member/user_add','get|post');
 Route::rule('user_del','Member/user_del','get|post');
+Route::rule('user_edit','Member/user_edit','get|post');

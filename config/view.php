@@ -24,7 +24,7 @@ return [
     'taglib_end'    => '}',
 
     'tpl_replace_string' => [
-        '__IMAGE__'     => '/static/index',
+        '__INDEX__'     => '/static/index',
         '__ADMIN__'     => '/static/admin',
         '__UPLOAD__'     =>'/upload',
 
