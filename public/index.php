@@ -17,7 +17,9 @@ require __DIR__ . '/../vendor/autoload.php';
 // 执行HTTP应用并响应
 $http = (new App())->http;
 
+// 隐藏模块名 www.xtma.com/index/user_register 把index删除
 $response = $http->run();
+//$response = $http->name('index')->run();
 
 $response->send();
 
